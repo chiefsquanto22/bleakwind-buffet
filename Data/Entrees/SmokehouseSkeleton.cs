@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Entrees
+namespace BleakwindBuffet.Data.Entrees
 {
     public class SmokehouseSkeleton
     {
@@ -20,7 +20,7 @@ namespace Data.Entrees
         public bool Pancake { get; set; } = true;
 
 
-        List<string> SpecialInstructions { 
+        public List<string> SpecialInstructions { 
             get
             {
                 List<string> specialInstructions = new List<string>();

@@ -7,19 +7,19 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Entrees
+namespace BleakwindBuffet.Data.Entrees
 {
     public class GardenOrcOmelette
     {
-        public double Price = 4.57;
-        public uint Calories = 404;
+        public double Price { get => 4.57; }
+        public uint Calories { get => 404; }
 
         public bool Broccoli { get; set; } = true;
         public bool Mushrooms { get; set; } = true;
         public bool Tomato { get; set; } = true;
         public bool Cheddar { get; set; } = true;
 
-        List<string> SpecialInstructions
+        public List<string> SpecialInstructions
         {
             get
             {
@@ -31,6 +31,10 @@ namespace Data.Entrees
                 if (!Cheddar) specialInstructions.Add("Hold cheddar");
                 return specialInstructions;
             }
+        }
+        public string ToString()
+        {
+            return "Garden Orc Omelette";
         }
     }
 }

@@ -7,10 +7,25 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Entrees
+namespace BleakwindBuffet.Data.Entrees
 {
-    class ThugsT_Bone
+    public class ThugsT_Bone
     {
+        public double Price = 6.44;
+        public uint Calories = 982;
+
+        public List<string> SpecialInstructions 
+        {
+            get
+            {
+                return new List<string>();
+            }
+        }
+
+        public string ToString()
+        {
+            return "Thugs T-Bone";
+        }
 
     }
 }
