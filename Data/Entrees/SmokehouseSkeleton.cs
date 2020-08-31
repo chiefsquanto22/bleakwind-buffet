@@ -11,15 +11,28 @@ namespace BleakwindBuffet.Data.Entrees
 {
     public class SmokehouseSkeleton
     {
-        public double Price = 5.62;
-        public uint Calories = 602;
-
+        public double Price { get => 5.62; }
+        public uint Calories { get => 602; }
+        /// <summary>
+        /// Property to hold status of the sausage links. Default true.
+        /// </summary>
         public bool SausageLinks { get; set; } = true;
+        /// <summary>
+        /// Property to hold status of the egg. Default true.
+        /// </summary>
         public bool Egg { get; set; } = true;
+        /// <summary>
+        /// Property to hold status of the hash browns. Default true.
+        /// </summary>
         public bool HashBrowns { get; set; } = true;
+        /// <summary>
+        /// Property to hold status of the pancake. Default true.
+        /// </summary>
         public bool Pancake { get; set; } = true;
 
-
+        /// <summary>
+        /// List of special instructions for the order
+        /// </summary>
         public List<string> SpecialInstructions { 
             get
             {
@@ -32,6 +45,10 @@ namespace BleakwindBuffet.Data.Entrees
             } 
         }
 
+        /// <summary>
+        /// Overrides the generic ToString() method.
+        /// </summary>
+        /// <returns> returns a string saying "Smokehouse Skeleton" </returns>
         public string ToString()
         {
             return "Smokehouse Skeleton";

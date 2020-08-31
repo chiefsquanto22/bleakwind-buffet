@@ -9,13 +9,34 @@ using System.Text;
 using BleakwindBuffet.Data.Enums;
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// Represents Warrior Water
+    /// </summary>
     public class WarriorWater
     {
+        /// <summary>
+        /// Property to hold price
+        /// </summary>
         public double Price { get => 0; }
+        /// <summary>
+        /// Property to hold Calories
+        /// </summary>
         public uint Calories { get => 0; }
+        /// <summary>
+        /// Property to hold status of ice
+        /// </summary>
         public bool Ice { get; set; } = true;
+        /// <summary>
+        /// property to hold status of lemon
+        /// </summary>
         public bool Lemon { get; set; } = false;
+        /// <summary>
+        /// property to hold status of size
+        /// </summary>
         public Size Size { get; set; } = Size.Small;
+        /// <summary>
+        /// Creates a list of special instructions for the order
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -26,6 +47,11 @@ namespace BleakwindBuffet.Data.Drinks
                 return specials;
             }
         }
+
+        /// <summary>
+        /// Overrides the generic ToString() method
+        /// </summary>
+        /// <returns> a string with the size and type of order </returns>
         public string ToString()
         {
                 return Size.ToString() + " Warrior Water";

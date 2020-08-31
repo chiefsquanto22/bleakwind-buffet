@@ -11,8 +11,8 @@ namespace BleakwindBuffet.Data.Entrees
 {
     public class ThugsT_Bone
     {
-        public double Price = 6.44;
-        public uint Calories = 982;
+        public double Price { get => 6.44; }
+        public uint Calories { get => 982; }
 
         public List<string> SpecialInstructions 
         {

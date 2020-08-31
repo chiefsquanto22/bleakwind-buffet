@@ -9,36 +9,76 @@ using System.Text;
 using BleakwindBuffet.Data.Enums;
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// Class for the Aretino Apple Juice
+    /// </summary>
     public class AretinoAppleJuice
     {
-        public double Price;
-        public uint Calories;
-        public bool Ice { get; set; } = false;
-
-        public Size Size
+        
+        /// <summary>
+        /// Property to hold the Price of the beverage based on size
+        /// </summary>
+        public double Price
         {
-            get { return Size; }
-            set
+            get
             {
                 if (Size.Equals(Size.Small))
                 {
-                    Price = .62;
-                    Calories = 44;
+                    return .62;
                 }
-
                 if (Size.Equals(Size.Medium))
                 {
-                    Price = .87;
-                    Calories = 88;
+                    return .87;
                 }
-
-                if (Size.Equals(Size.Large))
+                else
                 {
-                    Price = 1.01;
-                    Calories = 132;
+                    return 1.01;
                 }
             }
         }
+        /// <summary>
+        /// Property to hold the number of Calories based on the size of the beverage
+        /// </summary>
+        public uint Calories
+        {
+            get
+            {
+                if (Size.Equals(Size.Small))
+                {
+                    return 44;
+                }
+                if (Size.Equals(Size.Medium))
+                {
+                    return 88;
+                }
+                else
+                {
+                    return 132;
+                }
+            }
+        }
+        /// <summary>
+        /// Property to hold the status of Ice on the order. Default false.
+        /// </summary>
+        public bool Ice { get; set; } = false;
+        /// <summary>
+        /// Private backing variable for the Size property. Default small.
+        /// </summary>
+        private Size size = Size.Small;
+        /// <summary>
+        /// Property to hold the size of order.
+        /// </summary>
+        public Size Size
+        {
+            get { return size; }
+            set
+            {
+                size = value;
+            }
+        }
+        /// <summary>
+        /// List to hold any special instructions for the order
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -48,6 +88,10 @@ namespace BleakwindBuffet.Data.Drinks
                 return specials;
             }
         }
+        /// <summary>
+        /// Overrides the ToString() method
+        /// </summary>
+        /// <returns> a string with the size and type of beverage </returns>
         public string ToString()
         {
             return Size + " Aretino Apple Juice";
