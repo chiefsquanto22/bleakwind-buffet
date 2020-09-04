@@ -43,7 +43,7 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        public uint calories;
+        private uint calories;
         /// <summary>
         /// Property to hold the number of Calories based on size
         /// </summary>
@@ -77,21 +77,9 @@ namespace BleakwindBuffet.Data.Drinks
         public SodaFlavor Flavor { get; set; } = SodaFlavor.Cherry;
 
         /// <summary>
-        /// Private backing variable for the Size property
-        /// </summary>
-        private Size size = Size.Small;
-
-        /// <summary>
         /// Property to hold the Size of the soda
         /// </summary>
-        public Size Size {
-            get { return size; }
-
-            set
-            {
-                size = value;
-            }
-        }
+        public Size Size { get; set; } = Size.Small;
 
         /// <summary>
         /// List of special instructions to modify the order

@@ -77,21 +77,9 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Ice { get; set; } = false;
 
         /// <summary>
-        /// Private backing variable for the Size property. Default is small.
-        /// </summary>
-        private Size size = Size.Small;
-
-        /// <summary>
         /// Property to hold the Size of the beverage
         /// </summary>
-        public Size Size
-        {
-            get { return size; }
-            set
-            {
-                size = value;
-            }
-        }
+        public Size Size { get; set; } = Size.Small;
 
         /// <summary>
         /// List to hold any special instructions for the order

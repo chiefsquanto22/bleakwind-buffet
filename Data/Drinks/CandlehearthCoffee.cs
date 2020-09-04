@@ -72,23 +72,11 @@ namespace BleakwindBuffet.Data.Drinks
         /// Property to hold whether or not the order calls for decaf coffee
         /// </summary>
         public bool Decaf { get; set; } = false;
-        
-        /// <summary>
-        /// private backing variable for the Size property
-        /// </summary>
-        private Size size = Size.Small;
-        
+
         /// <summary>
         /// Property to hold the size of the Size of the beverage
         /// </summary>
-        public Size Size
-        {
-            get { return size; }
-            set
-            {
-                size = value;
-            }
-        }
+        public Size Size { get; set; } = Size.Small;
 
         /// <summary>
         /// List to hold any special instructions for the order
