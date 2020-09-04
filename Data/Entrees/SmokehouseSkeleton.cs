@@ -9,14 +9,24 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class to represent the Smokehouse Skeleton breakfast combo
+    /// </summary>
     public class SmokehouseSkeleton
     {
+        /// <summary>
+        /// Property to hold price
+        /// </summary>
         public double Price { get => 5.62; }
+
+        /// <summary>
+        /// Property to hold the number of Calories
+        /// </summary>
         public uint Calories { get => 602; }
         /// <summary>
         /// Property to hold status of the sausage links. Default true.
         /// </summary>
-        public bool SausageLinks { get; set; } = true;
+        public bool SausageLink { get; set; } = true;
         /// <summary>
         /// Property to hold status of the egg. Default true.
         /// </summary>
@@ -37,7 +47,7 @@ namespace BleakwindBuffet.Data.Entrees
             get
             {
                 List<string> specialInstructions = new List<string>();
-                if (!SausageLinks) specialInstructions.Add("Hold sausage");
+                if (!SausageLink) specialInstructions.Add("Hold sausage");
                 if (!Egg) specialInstructions.Add("Hold egg");
                 if (!HashBrowns) specialInstructions.Add("Hold hash browns");
                 if (!Pancake) specialInstructions.Add("Hold pancakes");
@@ -49,7 +59,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Overrides the generic ToString() method.
         /// </summary>
         /// <returns> returns a string saying "Smokehouse Skeleton" </returns>
-        public string ToString()
+        public override string ToString()
         {
             return "Smokehouse Skeleton";
         }

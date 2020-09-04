@@ -9,28 +9,36 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class to represent the Garden Orc Omelette veggie omelette
+    /// </summary>
     public class GardenOrcOmelette
     {
         /// <summary>
         /// Property to hold the price
         /// </summary>
         public double Price { get => 4.57; }
+
         /// <summary>
         /// Property to hold the number of Calories
         /// </summary>
         public uint Calories { get => 404; }
+
         /// <summary>
         /// Property to hold status of the broccoli. Default true.
         /// </summary>
         public bool Broccoli { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the mushrooms. Default true.
         /// </summary>
         public bool Mushrooms { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the tomato. Default true.
         /// </summary>
         public bool Tomato { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the cheddar. Default true.
         /// </summary>
@@ -56,7 +64,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Overrides the generic ToString() method
         /// </summary>
         /// <returns> returns the string "Garden Orc Omelette" </returns>
-        public string ToString()
+        public override string ToString()
         {
             return "Garden Orc Omelette";
         }

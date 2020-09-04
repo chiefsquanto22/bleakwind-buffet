@@ -15,6 +15,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Property to represent the Price
         /// </summary>
         public double Price { get => 8.32; }
+
         /// <summary>
         /// Property to represent the Calories
         /// </summary>
@@ -24,44 +25,55 @@ namespace BleakwindBuffet.Data.Entrees
         /// Property to hold status of the bun. Default true.
         /// </summary>
         public bool Bun { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the ketchup. Default true.
         /// </summary>
         public bool Ketchup { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the mustard. Default true.
         /// </summary>
         public bool Mustard { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the pickle. Default true.
         /// </summary>
         public bool Pickle { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the cheese. Default true.
         /// </summary>
         public bool Cheese { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the tomato. Default true.
         /// </summary>
         public bool Tomato { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the lettuce. Default true.
         /// </summary>
         public bool Lettuce { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the mayo. Default true.
         /// </summary>
         public bool Mayo { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the bacon. Default true.
         /// </summary>
         public bool Bacon { get; set; } = true;
+
         /// <summary>
         /// Property to hold status of the egg. Default true.
         /// </summary>
         public bool Egg { get; set; } = true;
 
-
+        /// <summary>
+        /// A list containing special instructions based on the order
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -81,7 +93,11 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        public string ToString()
+        /// <summary>
+        /// Overrides the generic ToString() method
+        /// </summary>
+        /// <returns> returns a string saying "Thalmor Triple" </returns>
+        public override string ToString()
         {
             return "Thalmor Triple";
         }

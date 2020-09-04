@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
@@ -57,14 +58,17 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
         }
+
         /// <summary>
         /// Property to hold the status of Ice on the order. Default false.
         /// </summary>
         public bool Ice { get; set; } = false;
+
         /// <summary>
         /// Private backing variable for the Size property. Default small.
         /// </summary>
         private Size size = Size.Small;
+
         /// <summary>
         /// Property to hold the size of order.
         /// </summary>
@@ -92,9 +96,9 @@ namespace BleakwindBuffet.Data.Drinks
         /// Overrides the ToString() method
         /// </summary>
         /// <returns> a string with the size and type of beverage </returns>
-        public string ToString()
+        public override string ToString()
         {
-            return Size + " Aretino Apple Juice";
+            return Size.ToString() + " Aretino Apple Juice";
         }
     }
 }

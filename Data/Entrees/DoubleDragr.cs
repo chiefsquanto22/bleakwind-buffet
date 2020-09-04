@@ -9,6 +9,9 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class to represent the Double Dragr burger
+    /// </summary>
     public class DoubleDragr
     {
         /// <summary>
@@ -22,7 +25,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Property to hold status of the bun. Default true.
         /// </summary>
-        public bool Bun { get; set; }
+        public bool Bun { get; set; } = true;
         /// <summary>
         /// Property to hold status of the ketchup. Default true.
         /// </summary>
@@ -52,6 +55,9 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public bool Mayo { get; set; } = true;
 
+        /// <summary>
+        /// A list containing any special instructions with the order
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -69,7 +75,11 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        public string ToString()
+        /// <summary>
+        /// Overrides the generic ToString() method
+        /// </summary>
+        /// <returns> a string that says "Double Dragr" </returns>
+        public override string ToString()
         {
             return "Double Dragr";
         }

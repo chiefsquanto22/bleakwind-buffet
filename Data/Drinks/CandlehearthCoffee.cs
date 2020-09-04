@@ -11,7 +11,7 @@ using BleakwindBuffet.Data.Enums;
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
-    /// Class to represent CandlehearthCoffee
+    /// Class that creates an object to represent CandlehearthCoffee
     /// </summary>
     public class CandlehearthCoffee
     {   
@@ -36,12 +36,7 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
         }
-        
-        /// <summary>
-        /// private backing variable for Calories
-        /// </summary>
-        private uint calories;
-        
+                
         /// <summary>
         /// Property to hold the number of Calories based on Size
         /// </summary>
@@ -88,7 +83,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// </summary>
         public Size Size
         {
-            get { return Size; }
+            get { return size; }
             set
             {
                 size = value;
@@ -113,7 +108,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// Overrides the generic ToString() method
         /// </summary>
         /// <returns> a string with the size and type of beverage </returns>
-        public string ToString()
+        public override string ToString()
         {
             if (Decaf)
             {

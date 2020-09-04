@@ -10,9 +10,19 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Sides
 {
+    /// <summary>
+    /// Creates an object that represents Mad Otar Grits
+    /// </summary>
     public class MadOtarGrits
     {
+        /// <summary>
+        /// Private backing variable for Price
+        /// </summary>
         private double price;
+
+        /// <summary>
+        /// Property that holds the price
+        /// </summary>
         public double Price
         {
             get
@@ -41,7 +51,14 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// private backing variables for Calories
+        /// </summary>
         private uint calories;
+
+        /// <summary>
+        /// Property that holds the number of Calories 
+        /// </summary>
         public uint Calories
         {
             get
@@ -70,16 +87,21 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
-        private Size size = Size.Small;
-        public Size Size
-        {
-            get { return size; }
-            set
-            {
-                size = value;
-            }
-        }
-        public string ToString()
+        /// <summary>
+        /// Property that holds the Size
+        /// </summary>
+        public Size Size { get; set; } = Size.Small;
+
+        /// <summary>
+        /// An empty list of special instructions
+        /// </summary>
+        public List<string> SpecialInstructions { get => new List<string>(); }
+
+        /// <summary>
+        /// Overrides the generic ToString() method
+        /// </summary>
+        /// <returns>a string that says "(Size) Mad Otar Grits</returns>
+        public override string ToString()
         {
             return Size.ToString() + " Mad Otar Grits";
         }

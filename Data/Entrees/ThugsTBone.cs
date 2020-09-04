@@ -9,11 +9,21 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class ThugsT_Bone
+    public class ThugsTBone
     {
+        /// <summary>
+        /// Property that holds the price
+        /// </summary>
         public double Price { get => 6.44; }
+
+        /// <summary>
+        /// Property that holds the number of Calories
+        /// </summary>
         public uint Calories { get => 982; }
 
+        /// <summary>
+        /// Creates an empty list. You don't change a T Bone.
+        /// </summary>
         public List<string> SpecialInstructions 
         {
             get
@@ -22,7 +32,11 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        public string ToString()
+        /// <summary>
+        /// Overrides the generic ToString() method.
+        /// </summary>
+        /// <returns> a string saying "Thugs T-Bone" </returns>
+        public override string ToString()
         {
             return "Thugs T-Bone";
         }

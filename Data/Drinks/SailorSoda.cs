@@ -13,8 +13,13 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class to represent the Sailor's Soda option
     /// </summary>
-    public class SailorsSoda
+    public class SailorSoda
     {
+        /// <summary>
+        /// Private backing variable for Price
+        /// </summary>
+        private double price;
+
         /// <summary>
         /// Property to represent the price
         /// </summary>
@@ -24,19 +29,21 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 if (Size.Equals(Size.Small))
                 {
-                    return 1.42;
+                    price = 1.42;
                 }
                 if (Size.Equals(Size.Medium))
                 {
-                    return 1.74;
+                    price = 1.74;
                 }
                 else
                 {
-                    return 2.07;
+                    price = 2.07;
                 }
+                return price;
             }
         }
 
+        public uint calories;
         /// <summary>
         /// Property to hold the number of Calories based on size
         /// </summary>
@@ -46,30 +53,34 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 if (Size.Equals(Size.Small))
                 {
-                    return 117;
+                    calories = 117;
                 }
                 if (Size.Equals(Size.Medium))
                 {
-                    return 153;
+                    calories = 153;
                 }
                 else
                 {
-                    return 205;
+                    calories = 205;
                 }
+                return calories;
             }
         }
         /// <summary>
         /// Property to hold status of Ice in the order
         /// </summary>
         public bool Ice { get; set; } = true;
+
         /// <summary>
         /// Property to hold the flavor of the soda
         /// </summary>
         public SodaFlavor Flavor { get; set; } = SodaFlavor.Cherry;
+
         /// <summary>
         /// Private backing variable for the Size property
         /// </summary>
         private Size size = Size.Small;
+
         /// <summary>
         /// Property to hold the Size of the soda
         /// </summary>
@@ -81,6 +92,7 @@ namespace BleakwindBuffet.Data.Drinks
                 size = value;
             }
         }
+
         /// <summary>
         /// List of special instructions to modify the order
         /// </summary>
@@ -93,15 +105,14 @@ namespace BleakwindBuffet.Data.Drinks
                 return specials;
             }
         }
+
         /// <summary>
         /// Overrides the generic ToString() method
         /// </summary>
         /// <returns> a string witht the size and flavor of the Sailor's Soda</returns>
-        public string ToString()
+        public override string ToString()
         {
             return Size.ToString() +" "+ Flavor.ToString() + " Sailor Soda";
         }
-
-
     }
 }

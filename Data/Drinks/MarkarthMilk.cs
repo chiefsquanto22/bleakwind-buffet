@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
@@ -18,6 +19,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// Private backing variable for Price
         /// </summary>
         private double price;
+
         /// <summary>
         /// Property to hold the Price
         /// </summary>
@@ -25,20 +27,27 @@ namespace BleakwindBuffet.Data.Drinks
         {
             get
             {
-                if (Size.Equals(Size.Small))
-                {
-                    return 1.05;
-                }
                 if (Size.Equals(Size.Medium))
                 {
-                    return 1.11;
+                    price = 1.11;
+                }
+                if (Size.Equals(Size.Large))
+                {
+                    price = 1.22;
                 }
                 else
                 {
-                    return 1.22;
+                    price = 1.05;
                 }
+                return price;
             }
         }
+
+        /// <summary>
+        /// Private backing variable for Calories.
+        /// </summary>
+        private uint calories;
+
         /// <summary>
         /// Property to hold the number of Calories based on the size
         /// </summary>
@@ -48,26 +57,30 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 if (Size.Equals(Size.Small))
                 {
-                    return 56;
+                    calories = 56;
                 }
                 if (Size.Equals(Size.Medium))
                 {
-                    return 72;
+                    calories = 72;
                 }
                 else
                 {
-                    return 93;
+                    calories = 93;
                 }
+                return calories;
             }
         }
+
         /// <summary>
         /// Property to hold the status of Ice in the beverage
         /// </summary>
         public bool Ice { get; set; } = false;
+
         /// <summary>
         /// Private backing variable for the Size property. Default is small.
         /// </summary>
         private Size size = Size.Small;
+
         /// <summary>
         /// Property to hold the Size of the beverage
         /// </summary>
@@ -79,6 +92,7 @@ namespace BleakwindBuffet.Data.Drinks
                 size = value;
             }
         }
+
         /// <summary>
         /// List to hold any special instructions for the order
         /// </summary>
@@ -91,13 +105,14 @@ namespace BleakwindBuffet.Data.Drinks
                 return specials;
             }
         }
+
         /// <summary>
         /// Overrides the generic ToString() method
         /// </summary>
         /// <returns> a string with the size and name of beverage </returns>
-        public string ToString()
+        public override string ToString()
         {
-            return Size + " Markarth Milk";
+            return Size.ToString() + " Markarth Milk";
         }
     }
 }

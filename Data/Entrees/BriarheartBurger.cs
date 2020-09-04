@@ -9,6 +9,9 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class to represent the Briarheart Burger
+    /// </summary>
     public class BriarheartBurger
     {
         /// <summary>
@@ -22,7 +25,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Property to hold status of the bun. Default true.
         /// </summary>
-        public bool Bun { get; set; }
+        public bool Bun { get; set; } = true;
         /// <summary>
         /// Property to hold status of the ketchup. Default true.
         /// </summary>
@@ -60,7 +63,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Overrides the generic ToString() method
         /// </summary>
         /// <returns> returns the string "Briarheart Burger"</returns>
-        public string ToString()
+        public override string ToString()
         {
             return "Briarheart Burger";
         }

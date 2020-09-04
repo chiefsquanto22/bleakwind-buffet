@@ -3,9 +3,6 @@
  * Class name: SodaFlavor
  * Purpose: Class usedto represent soda flavors through an enumeration
  */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BleakwindBuffet.Data.Enums
 {

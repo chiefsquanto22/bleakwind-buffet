@@ -10,9 +10,19 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Sides
 {
+    /// <summary>
+    /// Creates objects to represent Vokun Salad
+    /// </summary>
     public class VokunSalad
     {
+        /// <summary>
+        /// private backing variable for Price
+        /// </summary>
         private double price;
+
+        /// <summary>
+        /// Property that holds the price
+        /// </summary>
         public double Price
         {
             get
@@ -41,7 +51,14 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Private backing variable for Calories
+        /// </summary>
         private uint calories;
+
+        /// <summary>
+        /// Property that holds the number of Calories
+        /// </summary>
         public uint Calories
         {
             get
@@ -69,16 +86,22 @@ namespace BleakwindBuffet.Data.Sides
                 }
             }
         }
-        private Size size = Size.Small;
-        public Size Size
-        {
-            get { return Size; }
-            set
-            {
-                size = value;
-            }
-        }
-        public string ToString()
+
+        /// <summary>
+        /// Property that holds the size of the salad
+        /// </summary>
+        public Size Size { get; set; } = Size.Small;
+
+        /// <summary>
+        /// An empty list of special instructions
+        /// </summary>
+        public List<string> SpecialInstructions { get => new List<string>(); }
+
+        /// <summary>
+        /// Overrides the generic ToString() method
+        /// </summary>
+        /// <returns> a string that says "(Size) Vokun Salad"</returns>
+        public override string ToString()
         {
             return Size.ToString() + " Vokun Salad";
         }
