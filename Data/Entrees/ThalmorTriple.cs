@@ -1,7 +1,7 @@
 ﻿/*
  * Author: John Nettles
  * Class name: ThalmorTriple.cs
- * Purpose: To create objects to represent the 1lb, triple payy burger.
+ * Purpose: To create objects to represent the 1lb, triple patty burger.
  */
 using System;
 using System.Collections.Generic;
@@ -9,6 +9,9 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Creates an object to represent the Thalmor Triple
+    /// </summary>
     public class ThalmorTriple
     {
         /// <summary>
