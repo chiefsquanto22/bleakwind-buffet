@@ -15,14 +15,14 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class MarkarthMilk
     {
-        /// <summary>
+        /// <value>
         /// Private backing variable for Price
-        /// </summary>
+        /// </value>
         private double price;
 
-        /// <summary>
+        /// <value>
         /// Property to hold the Price
-        /// </summary>
+        /// </value>
         public double Price
         {
             get
@@ -43,14 +43,14 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        /// <summary>
+        /// <value>
         /// Private backing variable for Calories.
-        /// </summary>
+        /// </value>
         private uint calories;
 
-        /// <summary>
+        /// <value>
         /// Property to hold the number of Calories based on the size
-        /// </summary>
+        /// </value>
         public uint Calories
         {
             get
@@ -71,19 +71,19 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        /// <summary>
+        /// <value>
         /// Property to hold the status of Ice in the beverage
-        /// </summary>
+        /// </value>
         public bool Ice { get; set; } = false;
 
-        /// <summary>
+        /// <value>
         /// Property to hold the Size of the beverage
-        /// </summary>
+        /// </value>
         public Size Size { get; set; } = Size.Small;
 
-        /// <summary>
+        /// <value>
         /// List to hold any special instructions for the order
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

@@ -14,34 +14,34 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class PhillyPoacher
     {
-        /// <summary>
+        /// <value>
         /// Property that holds the price
-        /// </summary>
+        /// </value>
         public double Price { get => 7.23; }
 
-        /// <summary>
+        /// <value>
         /// Property that holds the number of calories
-        /// </summary>
+        /// </value>
         public uint Calories { get => 784; }
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the sirloin. Default true.
-        /// </summary>
+        /// </value>
         public bool Sirloin { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the onion. Default true.
-        /// </summary>
+        /// </value>
         public bool Onion { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the roll. Default true.
-        /// </summary>
+        /// </value>
         public bool Roll { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// List holding special instructions for the order
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

@@ -15,34 +15,34 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class WarriorWater
     {
-        /// <summary>
+        /// <value>
         /// Property to hold price
-        /// </summary>
+        /// </value>
         public double Price { get => 0; }
 
-        /// <summary>
+        /// <value>
         /// Property to hold Calories
-        /// </summary>
+        /// </value>
         public uint Calories { get => 0; }
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of ice
-        /// </summary>
+        /// </value>
         public bool Ice { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// property to hold status of lemon
-        /// </summary>
+        /// </value>
         public bool Lemon { get; set; } = false;
 
-        /// <summary>
+        /// <value>
         /// property to hold status of size
-        /// </summary>
+        /// </value>
         public Size Size { get; set; } = Size.Small;
 
-        /// <summary>
+        /// <value>
         /// Creates a list of special instructions for the order
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

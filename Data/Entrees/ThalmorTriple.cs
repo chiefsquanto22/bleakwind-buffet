@@ -14,69 +14,69 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class ThalmorTriple
     {
-        /// <summary>
+        /// <value>
         /// Property to represent the Price
-        /// </summary>
+        /// </value>
         public double Price { get => 8.32; }
 
-        /// <summary>
+        /// <value>
         /// Property to represent the Calories
-        /// </summary>
+        /// </value>
         public uint Calories { get => 943; }
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the bun. Default true.
-        /// </summary>
+        /// </value>
         public bool Bun { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the ketchup. Default true.
-        /// </summary>
+        /// </value>
         public bool Ketchup { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the mustard. Default true.
-        /// </summary>
+        /// </value>
         public bool Mustard { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the pickle. Default true.
-        /// </summary>
+        /// </value>
         public bool Pickle { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the cheese. Default true.
-        /// </summary>
+        /// </value>
         public bool Cheese { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the tomato. Default true.
-        /// </summary>
+        /// </value>
         public bool Tomato { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the lettuce. Default true.
-        /// </summary>
+        /// </value>
         public bool Lettuce { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the mayo. Default true.
-        /// </summary>
+        /// </value>
         public bool Mayo { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the bacon. Default true.
-        /// </summary>
+        /// </value>
         public bool Bacon { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the egg. Default true.
-        /// </summary>
+        /// </value>
         public bool Egg { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// A list containing special instructions based on the order
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

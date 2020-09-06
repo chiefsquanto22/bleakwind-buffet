@@ -14,10 +14,10 @@ namespace BleakwindBuffet.Data.Drinks
     /// Class that creates an object to represent CandlehearthCoffee
     /// </summary>
     public class CandlehearthCoffee
-    {   
-        /// <summary>
+    {
+        /// <value>
         /// Property to hold the Price of the beverage based on Size
-        /// </summary>
+        /// </value>
         public double Price
         {
             get
@@ -36,10 +36,10 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
         }
-                
-        /// <summary>
+
+        /// <value>
         /// Property to hold the number of Calories based on Size
-        /// </summary>
+        /// </value>
         public uint Calories {
             get
             {
@@ -57,30 +57,30 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
         }
-        
-        /// <summary>
+
+        /// <value>
         /// Property to hold the status of Ice ing the beverage
-        /// </summary>
+        /// </value>
         public bool Ice { get; set; } = false;
-        
-        /// <summary>
+
+        /// <value>
         /// Property to hold the status of whether or not the order calls for cream
-        /// </summary>
+        /// </value>
         public bool RoomForCream { get; set; } = false;
-        
-        /// <summary>
+
+        /// <value>
         /// Property to hold whether or not the order calls for decaf coffee
-        /// </summary>
+        /// </value>
         public bool Decaf { get; set; } = false;
 
-        /// <summary>
+        /// <value>
         /// Property to hold the size of the Size of the beverage
-        /// </summary>
+        /// </value>
         public Size Size { get; set; } = Size.Small;
 
-        /// <summary>
+        /// <value>
         /// List to hold any special instructions for the order
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

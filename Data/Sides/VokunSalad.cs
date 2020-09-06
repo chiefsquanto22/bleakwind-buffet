@@ -15,14 +15,14 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public class VokunSalad
     {
-        /// <summary>
+        /// <value>
         /// private backing variable for Price
-        /// </summary>
+        /// </value>
         private double price;
 
-        /// <summary>
+        /// <value>
         /// Property that holds the price
-        /// </summary>
+        /// </value>
         public double Price
         {
             get
@@ -51,14 +51,14 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
-        /// <summary>
+        /// <value>
         /// Private backing variable for Calories
-        /// </summary>
+        /// </value>
         private uint calories;
 
-        /// <summary>
+        /// <value>
         /// Property that holds the number of Calories
-        /// </summary>
+        /// </value>
         public uint Calories
         {
             get
@@ -87,14 +87,14 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
-        /// <summary>
+        /// <value>
         /// Property that holds the size of the salad
-        /// </summary>
+        /// </value>
         public Size Size { get; set; } = Size.Small;
 
-        /// <summary>
+        /// <value>
         /// An empty list of special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions { get => new List<string>(); }
 
         /// <summary>

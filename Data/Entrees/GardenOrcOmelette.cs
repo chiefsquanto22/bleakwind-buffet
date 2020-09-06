@@ -14,39 +14,39 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class GardenOrcOmelette
     {
-        /// <summary>
+        /// <value>
         /// Property to hold the price
-        /// </summary>
+        /// </value>
         public double Price { get => 4.57; }
 
-        /// <summary>
+        /// <value>
         /// Property to hold the number of Calories
-        /// </summary>
+        /// </value>
         public uint Calories { get => 404; }
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the broccoli. Default true.
-        /// </summary>
+        /// </value>
         public bool Broccoli { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the mushrooms. Default true.
-        /// </summary>
+        /// </value>
         public bool Mushrooms { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the tomato. Default true.
-        /// </summary>
+        /// </value>
         public bool Tomato { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold status of the cheddar. Default true.
-        /// </summary>
+        /// </value>
         public bool Cheddar { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// List containing special instructions for the order
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get
@@ -60,6 +60,7 @@ namespace BleakwindBuffet.Data.Entrees
                 return specialInstructions;
             }
         }
+
         /// <summary>
         /// Overrides the generic ToString() method
         /// </summary>

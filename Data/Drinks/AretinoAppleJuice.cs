@@ -15,10 +15,10 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class AretinoAppleJuice
     {
-        
-        /// <summary>
+
+        /// <value>
         /// Property to hold the Price of the beverage based on size
-        /// </summary>
+        /// </value>
         public double Price
         {
             get
@@ -37,9 +37,9 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
         }
-        /// <summary>
+        /// <value>
         /// Property to hold the number of Calories based on the size of the beverage
-        /// </summary>
+        /// </value>
         public uint Calories
         {
             get
@@ -59,19 +59,19 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        /// <summary>
+        /// <value>
         /// Property to hold the status of Ice on the order. Default false.
-        /// </summary>
+        /// </value>
         public bool Ice { get; set; } = false;
 
-        /// <summary>
+        /// <value>
         /// Property to hold the size of order.
-        /// </summary>
+        /// </value>
         public Size Size { get; set; } = Size.Small;
 
-        /// <summary>
+        /// <value>
         /// List to hold any special instructions for the order
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

@@ -11,19 +11,19 @@ namespace BleakwindBuffet.Data.Entrees
 {
     public class ThugsTBone
     {
-        /// <summary>
+        /// <value>
         /// Property that holds the price
-        /// </summary>
+        /// </value>
         public double Price { get => 6.44; }
 
-        /// <summary>
+        /// <value>
         /// Property that holds the number of Calories
-        /// </summary>
+        /// </value>
         public uint Calories { get => 982; }
 
-        /// <summary>
+        /// <value>
         /// Creates an empty list. You don't change a T Bone.
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions 
         {
             get

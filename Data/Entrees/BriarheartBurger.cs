@@ -14,38 +14,44 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class BriarheartBurger
     {
-        /// <summary>
+        /// <value>
         /// Property that holds the price.
-        /// </summary>
+        /// </value>
         public double Price { get => 6.32; }
-        /// <summary>
+
+        /// <value>
         /// Property that holds the number of calories.
-        /// </summary>
+        /// </value>
         public uint Calories { get => 743; }
-        /// <summary>
+
+        /// <value>
         /// Property to hold status of the bun. Default true.
-        /// </summary>
+        /// </value>
         public bool Bun { get; set; } = true;
-        /// <summary>
+
+        /// <value>
         /// Property to hold status of the ketchup. Default true.
-        /// </summary>
+        /// </value>
         public bool Ketchup { get; set; } = true;
-        /// <summary>
+
+        /// <value>
         /// Property to hold status of the mustard. Default true.
-        /// </summary>
+        /// </value>
         public bool Mustard { get; set; } = true;
-        /// <summary>
+
+        /// <value>
         /// Property to hold status of the pickle. Default true.
-        /// </summary>
+        /// </value>
         public bool Pickle { get; set; } = true;
-        /// <summary>
+
+        /// <value>
         /// Property to hold status of the cheese. Default true.
-        /// </summary>
+        /// </value>
         public bool Cheese { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// List holding any special instructions for the order
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

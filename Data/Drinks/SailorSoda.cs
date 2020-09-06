@@ -15,14 +15,14 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class SailorSoda
     {
-        /// <summary>
+        /// <value>
         /// Private backing variable for Price
-        /// </summary>
+        /// </value>
         private double price;
 
-        /// <summary>
+        /// <value>
         /// Property to represent the price
-        /// </summary>
+        /// </value>
         public double Price
         {
             get
@@ -42,11 +42,14 @@ namespace BleakwindBuffet.Data.Drinks
                 return price;
             }
         }
-
+        /// <value>
+        /// Private backing variable for Calories
+        /// </value>
         private uint calories;
-        /// <summary>
+
+        /// <value>
         /// Property to hold the number of Calories based on size
-        /// </summary>
+        /// </value>
         public uint Calories
         {
             get
@@ -66,24 +69,24 @@ namespace BleakwindBuffet.Data.Drinks
                 return calories;
             }
         }
-        /// <summary>
+        /// <value>
         /// Property to hold status of Ice in the order
-        /// </summary>
+        /// </value>
         public bool Ice { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// Property to hold the flavor of the soda
-        /// </summary>
+        /// </value>
         public SodaFlavor Flavor { get; set; } = SodaFlavor.Cherry;
 
-        /// <summary>
+        /// <value>
         /// Property to hold the Size of the soda
-        /// </summary>
+        /// </value>
         public Size Size { get; set; } = Size.Small;
 
-        /// <summary>
+        /// <value>
         /// List of special instructions to modify the order
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

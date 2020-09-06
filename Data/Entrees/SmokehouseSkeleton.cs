@@ -14,35 +14,39 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class SmokehouseSkeleton
     {
-        /// <summary>
+        /// <value>
         /// Property to hold price
-        /// </summary>
+        /// </value>
         public double Price { get => 5.62; }
 
-        /// <summary>
+        /// <value>
         /// Property to hold the number of Calories
-        /// </summary>
+        /// </value>
         public uint Calories { get => 602; }
-        /// <summary>
+
+        /// <value>
         /// Property to hold status of the sausage links. Default true.
-        /// </summary>
+        /// </value>
         public bool SausageLink { get; set; } = true;
-        /// <summary>
+
+        /// <value>
         /// Property to hold status of the egg. Default true.
-        /// </summary>
+        /// </value>
         public bool Egg { get; set; } = true;
-        /// <summary>
+
+        /// <value>
         /// Property to hold status of the hash browns. Default true.
-        /// </summary>
+        /// </value>
         public bool HashBrowns { get; set; } = true;
-        /// <summary>
+
+        /// <value>
         /// Property to hold status of the pancake. Default true.
-        /// </summary>
+        /// </value>
         public bool Pancake { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// List of special instructions for the order
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions { 
             get
             {

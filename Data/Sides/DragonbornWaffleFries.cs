@@ -14,14 +14,14 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public class DragonbornWaffleFries
     {
-        /// <summary>
+        /// <value>
         /// private backing variable for Price
-        /// </summary>
+        /// </value>
         private double price;
 
-        /// <summary>
+        /// <value>
         /// Property that holds the price
-        /// </summary>
+        /// </value>
         public double Price
         {
             get
@@ -50,14 +50,14 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
-        /// <summary>
+        /// <value>
         /// private backing variable for Calories
-        /// </summary>
+        /// </value>
         private uint calories;
 
-        /// <summary>
+        /// <value>
         /// Property that holds the number of Calories
-        /// </summary>
+        /// </value>
         public uint Calories
         {
             get
@@ -86,14 +86,14 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
-        /// <summary>
+        /// <value>
         /// Property that holds the Size
-        /// </summary>
+        /// </value>
         public Size Size { get; set; } = Size.Small;
 
-        /// <summary>
+        /// <value>
         /// An empty list of special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions { get => new List<string>(); }
 
         /// <summary>

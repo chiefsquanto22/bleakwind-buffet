@@ -6,6 +6,9 @@
 
 namespace BleakwindBuffet.Data.Enums
 {
+    /// <summary>
+    /// Provides available flavors for the Sailor Soda
+    /// </summary>
     public enum SodaFlavor
     {
         Blackberry,
