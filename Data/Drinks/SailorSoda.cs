@@ -35,7 +35,7 @@ namespace BleakwindBuffet.Data.Drinks
                 {
                     price = 1.74;
                 }
-                else
+                if (Size.Equals(Size.Large))
                 {
                     price = 2.07;
                 }
@@ -62,7 +62,7 @@ namespace BleakwindBuffet.Data.Drinks
                 {
                     calories = 153;
                 }
-                else
+                if(Size.Equals(Size.Large))
                 {
                     calories = 205;
                 }

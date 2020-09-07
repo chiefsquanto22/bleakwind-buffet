@@ -26,10 +26,6 @@ namespace BleakwindBuffet.Data.Sides
         {
             get
             {
-                return price;
-            }
-            set
-            {
                 if (Size.Equals(Size.Small))
                 {
 
@@ -47,6 +43,7 @@ namespace BleakwindBuffet.Data.Sides
 
                     price = .96;
                 }
+                return price;
             }
         }
 
@@ -61,10 +58,6 @@ namespace BleakwindBuffet.Data.Sides
         public uint Calories
         {
             get
-            {
-                return calories;
-            }
-            set
             {
                 if (Size.Equals(Size.Small))
                 {
@@ -83,6 +76,7 @@ namespace BleakwindBuffet.Data.Sides
 
                     calories = 100;
                 }
+                return calories;
             }
         }
 

@@ -1,5 +1,5 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: John Nettles
  * Class: CandlehearthCoffeeTests.cs
  * Purpose: Test the CandlehearthCoffee.cs class in the Data library
  */
@@ -7,6 +7,7 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Drinks;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
@@ -15,41 +16,65 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            Assert.False(co.Ice);
         }
 
         [Fact]
         public void ShouldNotBeDecafByDefault()
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            Assert.False(co.Decaf);
         }
 
         [Fact]
         public void ShouldNotHaveRoomForCreamByDefault()
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            Assert.False(co.RoomForCream);
         }
 
         [Fact]
         public void ShouldBeSmallByDefault()
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            Assert.Equal(Size.Small, co.Size);
         }
 
         [Fact]
         public void ShouldBeAbleToSetIce()
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            co.Ice = true;
+            Assert.True(co.Ice);
         }
 
         [Fact]
         public void ShouldBeAbleToSetDecaf()
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            co.Decaf = true;
+            Assert.True(co.Decaf);
         }
 
         [Fact]
         public void ShouldBeAbleToSetRoomForCream()
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            co.RoomForCream = true;
+            Assert.True(co.RoomForCream);
         }
 
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            co.Size = Size.Medium;
+            Assert.Equal(Size.Medium, co.Size);
+            co.Size = Size.Large;
+            Assert.Equal(Size.Large, co.Size);
+            co.Size = Size.Small;
+            Assert.Equal(Size.Small, co.Size);
         }
 
         [Theory]
@@ -58,6 +83,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(Size.Large, 1.75)]
         public void ShouldHaveCorrectPriceForSize(Size size, double price)
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            co.Size = size;
+            Assert.Equal(price, co.Price);
         }
 
         [Theory]
@@ -66,6 +94,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(Size.Large, 20)]
         public void ShouldHaveCorrectCaloriesForSize(Size size, uint cal)
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            co.Size = size;
+            Assert.Equal(cal, co.Calories);
         }
 
         [Theory]
@@ -75,6 +106,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(false, false)]
         public void ShouldHaveCorrectSpecialInstructions(bool includeIce, bool includeCream)
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            co.Ice = includeIce;
+            co.RoomForCream = includeCream;
+            if (includeIce) Assert.Contains("Add ice", co.SpecialInstructions);
+            if (includeCream) Assert.Contains("Add cream", co.SpecialInstructions);
+            if (!includeIce && !includeCream) Assert.Empty(co.SpecialInstructions);
         }
 
         [Theory]
@@ -86,6 +123,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(false, Size.Large, "Large Candlehearth Coffee")]
         public void ShouldReturnCorrectToStringBasedOnSize(bool decaf, Size size, string name)
         {
+            CandlehearthCoffee co = new CandlehearthCoffee();
+            co.Size = size;
+            co.Decaf = decaf;
+            Assert.Equal(name, co.ToString());
         }
     }
 }

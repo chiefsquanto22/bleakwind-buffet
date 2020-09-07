@@ -98,9 +98,10 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns> a string with the size and type of beverage </returns>
         public override string ToString()
         {
-            if (Decaf)
+            if (Decaf == true)
             {
                 return Size.ToString() + " Decaf Candlehearth Coffee";
+                
             }
             else
             {

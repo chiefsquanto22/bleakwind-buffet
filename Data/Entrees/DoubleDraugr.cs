@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class to represent the Double Dragr burger
     /// </summary>
-    public class DoubleDragr
+    public class DoubleDraugr
     {
         /// <value>
         /// Property that holds the price
