@@ -19,7 +19,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             WarriorWater co = new WarriorWater();
             Assert.True(co.Ice);
         }
-
+        [Fact]
+        public void ShouldNotIncludeLemonByDefault()
+        {
+            WarriorWater co = new WarriorWater();
+            Assert.False(co.Lemon);
+        }
         [Fact]
         public void ShouldBySmallByDefault()
         {
@@ -31,8 +36,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldByAbleToSetIce()
         {
             WarriorWater co = new WarriorWater();
+            co.Ice = false;
+            Assert.False(co.Ice);
             co.Ice = true;
             Assert.True(co.Ice);
+        }
+        [Fact]
+        public void ShouldByAbleToLemonIce()
+        {
+            WarriorWater co = new WarriorWater();
+            co.Lemon = true;
+            Assert.True(co.Lemon);
+            co.Lemon = false;
+            Assert.False(co.Lemon);
         }
 
         [Fact]
@@ -70,14 +86,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         }
 
         [Theory]
-        [InlineData(true)]
-        [InlineData(false)]
-        public void ShouldHaveCorrectSpecialInstructions(bool includeIce)
+        [InlineData(true, true)]
+        [InlineData(false, false)]
+        [InlineData(false, true)]
+        [InlineData(true, false)]
+        public void ShouldHaveCorrectSpecialInstructions(bool includeIce, bool includeLemon)
         {
             WarriorWater co = new WarriorWater();
             co.Ice = includeIce;
+            co.Lemon = includeLemon;
             if (!includeIce) Assert.Contains("Hold ice", co.SpecialInstructions);
-            if (includeIce) Assert.Empty(co.SpecialInstructions);
+            if (includeLemon) Assert.Contains("Add lemon", co.SpecialInstructions);
+            if (includeIce && !includeLemon) Assert.Empty(co.SpecialInstructions);
         }
 
         [Theory]
