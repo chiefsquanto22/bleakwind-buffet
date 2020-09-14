@@ -14,6 +14,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class MadOtarGritsTests
     {
         [Fact]
+        public void ShouldBeAnEntree()
+        {
+            MadOtarGrits aj = new MadOtarGrits();
+            Assert.IsAssignableFrom<Side>(aj);
+        }
+        [Fact]
         public void ShouldBeSmallByDefault()
         {
             MadOtarGrits aj = new MadOtarGrits();

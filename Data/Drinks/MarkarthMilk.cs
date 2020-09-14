@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class to represent Markarth Milk
     /// </summary>
-    public class MarkarthMilk
+    public class MarkarthMilk : Drink
     {
         /// <value>
         /// Private backing variable for Price
@@ -23,7 +23,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// Property to hold the Price
         /// </value>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -51,7 +51,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// Property to hold the number of Calories based on the size
         /// </value>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -77,14 +77,9 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Ice { get; set; } = false;
 
         /// <value>
-        /// Property to hold the Size of the beverage
-        /// </value>
-        public Size Size { get; set; } = Size.Small;
-
-        /// <value>
         /// List to hold any special instructions for the order
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

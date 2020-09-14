@@ -12,17 +12,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class that creates the Philly Poacher object (philly cheesesteak)
     /// </summary>
-    public class PhillyPoacher
+    public class PhillyPoacher : Entree
     {
         /// <value>
         /// Property that holds the price
         /// </value>
-        public double Price { get => 7.23; }
+        public override double Price { get => 7.23; }
 
         /// <value>
         /// Property that holds the number of calories
         /// </value>
-        public uint Calories { get => 784; }
+        public override uint Calories { get => 784; }
 
         /// <value>
         /// Property to hold status of the sirloin. Default true.
@@ -42,7 +42,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <value>
         /// List holding special instructions for the order
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Creates an object that represents Mad Otar Grits
     /// </summary>
-    public class MadOtarGrits
+    public class MadOtarGrits : Side
     {
         /// <value>
         /// Private backing variable for Price
@@ -23,7 +23,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <value>
         /// Property that holds the price
         /// </value>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -56,7 +56,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <value>
         /// Property that holds the number of Calories 
         /// </value>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -82,14 +82,9 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <value>
-        /// Property that holds the Size
-        /// </value>
-        public Size Size { get; set; } = Size.Small;
-
-        /// <value>
         /// An empty list of special instructions
         /// </value>
-        public List<string> SpecialInstructions { get => new List<string>(); }
+        public override List<string> SpecialInstructions { get => new List<string>(); }
 
         /// <summary>
         /// Overrides the generic ToString() method

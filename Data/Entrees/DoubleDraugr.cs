@@ -12,17 +12,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class to represent the Double Dragr burger
     /// </summary>
-    public class DoubleDraugr
+    public class DoubleDraugr : Entree
     {
         /// <value>
         /// Property that holds the price
         /// </value>
-        public double Price { get => 7.32; }
+        public override double Price { get => 7.32; }
 
         /// <value>
         /// Property that holds the number of calories
         /// </value>
-        public uint Calories { get => 843; }
+        public override uint Calories { get => 843; }
 
         /// <value>
         /// Property to hold status of the bun. Default true.
@@ -67,7 +67,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <value>
         /// A list containing any special instructions with the order
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

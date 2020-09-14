@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Creates objects to represent Fried Miraak
     /// </summary>
-    public class FriedMiraak
+    public class FriedMiraak : Side
     {
         /// <value>
         /// Private backing variable for Price
@@ -23,7 +23,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <value>
         /// Property that holds the Price
         /// </value>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -56,7 +56,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <value>
         /// Property that holds the number of Calories
         /// </value>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -82,14 +82,9 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <value>
-        /// Property that holds the Size
-        /// </v>
-        public Size Size { get; set; } = Size.Small;
-
-        /// <value>
         /// An empty list of special instructions
         /// </value>
-        public List<string> SpecialInstructions { get => new List<string>(); }
+        public override List<string> SpecialInstructions { get => new List<string>(); }
 
         /// <summary>
         /// Overrides the generic ToString() method

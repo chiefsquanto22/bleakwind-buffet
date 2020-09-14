@@ -13,12 +13,12 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class that creates an object to represent CandlehearthCoffee
     /// </summary>
-    public class CandlehearthCoffee
+    public class CandlehearthCoffee : Drink
     {
         /// <value>
         /// Property to hold the Price of the beverage based on Size
         /// </value>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -40,7 +40,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// Property to hold the number of Calories based on Size
         /// </value>
-        public uint Calories {
+        public override uint Calories {
             get
             {
                 if (Size.Equals(Size.Small))
@@ -74,14 +74,9 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Decaf { get; set; } = false;
 
         /// <value>
-        /// Property to hold the size of the Size of the beverage
-        /// </value>
-        public Size Size { get; set; } = Size.Small;
-
-        /// <value>
         /// List to hold any special instructions for the order
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -13,13 +13,13 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class for the Aretino Apple Juice
     /// </summary>
-    public class AretinoAppleJuice
+    public class AretinoAppleJuice : Drink
     {
 
         /// <value>
         /// Property to hold the Price of the beverage based on size
         /// </value>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -40,7 +40,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// Property to hold the number of Calories based on the size of the beverage
         /// </value>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -65,14 +65,9 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Ice { get; set; } = false;
 
         /// <value>
-        /// Property to hold the size of order.
-        /// </value>
-        public Size Size { get; set; } = Size.Small;
-
-        /// <value>
         /// List to hold any special instructions for the order
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

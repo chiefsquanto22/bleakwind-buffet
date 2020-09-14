@@ -9,22 +9,22 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class ThugsTBone
+    public class ThugsTBone : Entree
     {
         /// <value>
         /// Property that holds the price
         /// </value>
-        public double Price { get => 6.44; }
+        public override double Price { get => 6.44; }
 
         /// <value>
         /// Property that holds the number of Calories
         /// </value>
-        public uint Calories { get => 982; }
+        public override uint Calories { get => 982; }
 
         /// <value>
         /// Creates an empty list. You don't change a T Bone.
         /// </value>
-        public List<string> SpecialInstructions 
+        public override List<string> SpecialInstructions 
         {
             get
             {

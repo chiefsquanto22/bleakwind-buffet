@@ -12,17 +12,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Creates an object to represent the Thalmor Triple
     /// </summary>
-    public class ThalmorTriple
+    public class ThalmorTriple : Entree
     {
         /// <value>
         /// Property to represent the Price
         /// </value>
-        public double Price { get => 8.32; }
+        public override double Price { get => 8.32; }
 
         /// <value>
         /// Property to represent the Calories
         /// </value>
-        public uint Calories { get => 943; }
+        public override uint Calories { get => 943; }
 
         /// <value>
         /// Property to hold status of the bun. Default true.
@@ -77,7 +77,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <value>
         /// A list containing special instructions based on the order
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
