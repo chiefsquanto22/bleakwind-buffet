@@ -14,7 +14,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class VokunSaladTests
     {
         [Fact]
-        public void ShouldBeAnEntree()
+        public void ShouldBeASide()
         {
             VokunSalad aj = new VokunSalad();
             Assert.IsAssignableFrom<Side>(aj);

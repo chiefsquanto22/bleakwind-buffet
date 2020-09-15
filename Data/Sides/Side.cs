@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// The size of the item
         /// </summary>
-        public virtual Size Size { get; set; }
+        public virtual Size Size { get; set; } = Size.Small;
 
         /// <summary>
         /// The price of the item

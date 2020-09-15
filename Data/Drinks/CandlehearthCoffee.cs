@@ -61,16 +61,25 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// Property to hold the status of Ice ing the beverage
         /// </value>
+        /// /// <remarks>
+        /// Default value is false
+        /// </remarks>
         public bool Ice { get; set; } = false;
 
         /// <value>
         /// Property to hold the status of whether or not the order calls for cream
         /// </value>
+        /// <remarks>
+        /// Default value is false
+        /// </remarks>
         public bool RoomForCream { get; set; } = false;
 
         /// <value>
         /// Property to hold whether or not the order calls for decaf coffee
         /// </value>
+        /// /// <remarks>
+        /// Default value is false
+        /// </remarks>
         public bool Decaf { get; set; } = false;
 
         /// <value>

@@ -14,7 +14,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class DragonbornWaffleFriesTests
     {
         [Fact]
-        public void ShouldBeAnEntree()
+        public void ShouldBeASide()
         {
             DragonbornWaffleFries aj = new DragonbornWaffleFries();
             Assert.IsAssignableFrom<Side>(aj);

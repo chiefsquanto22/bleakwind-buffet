@@ -14,7 +14,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class FriedMiraakTests
     {
         [Fact]
-        public void ShouldBeAnEntree()
+        public void ShouldBeASide()
         {
             FriedMiraak aj = new FriedMiraak();
             Assert.IsAssignableFrom<Side>(aj);

@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the drink
         /// </summary>
-        public virtual Size Size { get; set; }
+        public virtual Size Size { get; set; } = Size.Small;
 
         public abstract double Price { get; }
 
