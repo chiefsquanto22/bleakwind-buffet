@@ -19,6 +19,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.IsAssignableFrom<Entree>(aj);
         }
         [Fact]
+        public void ShouldBeAnIOrderItem()
+        {
+            ThalmorTriple aj = new ThalmorTriple();
+            Assert.IsAssignableFrom<IOrderItem>(aj);
+        }
+        [Fact]
         public void ShouldIncludeBunByDefault()
         {
             ThalmorTriple co = new ThalmorTriple();

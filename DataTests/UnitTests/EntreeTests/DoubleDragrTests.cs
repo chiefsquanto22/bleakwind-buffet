@@ -19,6 +19,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.IsAssignableFrom<Entree>(aj);
         }
         [Fact]
+        public void ShouldBeAnIOrderItem()
+        {
+            DoubleDragr aj = new DoubleDragr();
+            Assert.IsAssignableFrom<IOrderItem>(aj);
+        }
+        [Fact]
         public void ShouldIncludeBunByDefault()
         {
             DoubleDragr co = new DoubleDragr();

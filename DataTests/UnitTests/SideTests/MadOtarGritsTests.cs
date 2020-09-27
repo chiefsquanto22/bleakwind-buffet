@@ -20,12 +20,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.IsAssignableFrom<Side>(aj);
         }
         [Fact]
+        public void ShouldBeAnIOrderItem()
+        {
+            MadOtarGrits aj = new MadOtarGrits();
+            Assert.IsAssignableFrom<IOrderItem>(aj);
+        }
+        [Fact]
         public void ShouldBeSmallByDefault()
         {
             MadOtarGrits aj = new MadOtarGrits();
             Assert.Equal(Size.Small, aj.Size);
         }
-                
+
         [Fact]
         public void ShouldBeAbleToSetSize()
         {

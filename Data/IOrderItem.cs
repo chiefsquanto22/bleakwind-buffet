@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Author: John C. Nettles, Jr.
+ * Class name: IOrderItem.cs
+ * Purpose: a public interface to use as a base for Side.cs, Entree.cs and Drink.cs
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

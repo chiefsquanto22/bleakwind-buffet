@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: John Nettles
+ * Class name: Menu.cs
+ * Purpose: To 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Entrees;
@@ -9,10 +14,14 @@ using System.Linq;
 namespace BleakwindBuffet.Data
 {
     /// <summary>
-    /// 
+    /// Creates 
     /// </summary>
     public static class Menu
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <return> returns an IEnumerable of all the entrees </returns>
         public static IEnumerable<IOrderItem> Entrees()
         {
 
@@ -35,6 +44,10 @@ namespace BleakwindBuffet.Data
             return entrees;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static IEnumerable<IOrderItem> Sides()
         {
             VokunSalad aas = new VokunSalad();

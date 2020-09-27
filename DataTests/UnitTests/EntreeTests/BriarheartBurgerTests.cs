@@ -19,6 +19,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.IsAssignableFrom<Entree>(aj);
         }
         [Fact]
+        public void ShouldBeAnIOrderItem()
+        {
+            BriarheartBurger aj = new BriarheartBurger();
+            Assert.IsAssignableFrom<IOrderItem>(aj);
+        }
+        [Fact]
         public void ShouldIncludeBunByDefault()
         {
             BriarheartBurger co = new BriarheartBurger();

@@ -19,6 +19,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.IsAssignableFrom<Entree>(aj);
         }
         [Fact]
+        public void ShouldBeAnIOrderItem()
+        {
+            ThugsTBone aj = new ThugsTBone();
+            Assert.IsAssignableFrom<IOrderItem>(aj);
+        }
+        [Fact]
         public void ShouldReturnCorrectPrice()
         {
             ThugsTBone aj = new ThugsTBone();

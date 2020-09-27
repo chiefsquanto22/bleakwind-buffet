@@ -18,7 +18,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             GardenOrcOmelette aj = new GardenOrcOmelette();
             Assert.IsAssignableFrom<Entree>(aj);
         }
-
+        [Fact]
+        public void ShouldBeAnIOrderItem()
+        {
+            GardenOrcOmelette aj = new GardenOrcOmelette();
+            Assert.IsAssignableFrom<IOrderItem>(aj);
+        }
         [Fact]
         public void ShouldInlcudeBroccoliByDefault()
         {
