@@ -1,7 +1,7 @@
 ﻿/*
  * Author: John Nettles
  * Class name: Menu.cs
- * Purpose: To 
+ * Purpose: To act as a full menu with each option for each item.
  */
 using System;
 using System.Collections.Generic;
@@ -14,12 +14,12 @@ using System.Linq;
 namespace BleakwindBuffet.Data
 {
     /// <summary>
-    /// Creates 
+    /// Creates an instance of a menu
     /// </summary>
     public static class Menu
     {
         /// <summary>
-        /// 
+        /// Creates a list of all the entrees
         /// </summary>
         /// <return> returns an IEnumerable of all the entrees </returns>
         public static IEnumerable<IOrderItem> Entrees()
@@ -45,9 +45,9 @@ namespace BleakwindBuffet.Data
         }
 
         /// <summary>
-        /// 
+        /// Creates a list of all the Sides
         /// </summary>
-        /// <returns></returns>
+        /// <returns> an IEnumerable of every Side, including each available size</returns>
         public static IEnumerable<IOrderItem> Sides()
         {
             VokunSalad aas = new VokunSalad();
@@ -78,23 +78,29 @@ namespace BleakwindBuffet.Data
             FriedMiraak dcs = new FriedMiraak();
             dcs.Size = Enums.Size.Large;
 
-            List<IOrderItem> list = new List<IOrderItem>();
-            list.Add(aas);
-            list.Add(abs);
-            list.Add(acs);
-            list.Add(bas);
-            list.Add(bbs);
-            list.Add(bcs);
-            list.Add(cas);
-            list.Add(cbs);
-            list.Add(ccs);
-            list.Add(das);
-            list.Add(dbs);
-            list.Add(dcs);
+            List<IOrderItem> list = new List<IOrderItem>
+            {
+                aas,
+                abs,
+                acs,
+                bas,
+                bbs,
+                bcs,
+                cas,
+                cbs,
+                ccs,
+                das,
+                dbs,
+                dcs
+            };
             IEnumerable<IOrderItem> sides = from n in list select n;
             return sides;
         }
 
+        /// <summary>
+        /// Creates a list of all the drinks
+        /// </summary>
+        /// <returns> An IEnumerable with every drink, including every flavor, size, and option</returns>
         public static IEnumerable<IOrderItem> Drinks()
         {
             List<IOrderItem> list = new List<IOrderItem>();
@@ -233,6 +239,10 @@ namespace BleakwindBuffet.Data
             return drinks;
         }
 
+        /// <summary>
+        /// Creates a list of every item on the menu
+        /// </summary>
+        /// <returns>an IEnumerable of every item on the menu, including every size, flavor, and option</returns>
         public static IEnumerable<IOrderItem> FullMenu()
         {
             List<IOrderItem> list = new List<IOrderItem>();

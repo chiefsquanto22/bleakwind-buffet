@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: John Nettles
+ * Class name: Side.cs
+ * Purpose: Acts a base class for the Sides
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
@@ -8,6 +13,9 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// A base class representing side orders
     /// </summary>
+    /// <remarks>
+    /// Implements IOrderItem for generic properties
+    /// </remarks>
     public abstract class Side : IOrderItem
     {
         /// <summary>
