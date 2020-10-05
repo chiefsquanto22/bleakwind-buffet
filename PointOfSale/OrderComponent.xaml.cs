@@ -35,7 +35,7 @@ namespace PointOfSale
             
             currentListIndex++;
             containerBorder.Child = menu;
-            totalOrder.Items.Add(menu.buttonClicked);
+            
             HandleButtons();
         }
 

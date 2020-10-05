@@ -28,6 +28,7 @@ namespace PointOfSale
         {
             sender = (Button)sender;
             buttonClicked = sender.ToString();
+            totalOrder.Items.Add(buttonClicked);
         }
     }
 }
