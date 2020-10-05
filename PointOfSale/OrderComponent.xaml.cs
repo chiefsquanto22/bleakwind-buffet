@@ -30,12 +30,8 @@ namespace PointOfSale
         void AddItemToOrder(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            MenuComponent menu = new MenuComponent();
-            
-            
+            totalOrder.Items.Add(button.Content);
             currentListIndex++;
-            containerBorder.Child = menu;
-            totalOrder.Items.Add(menu.buttonClicked);
             HandleButtons();
         }
 
@@ -69,6 +65,11 @@ namespace PointOfSale
                 modifyItem.IsEnabled = true;
                 removeItem.IsEnabled = true;
             }
+        }
+
+        private void BriarheartBurger_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

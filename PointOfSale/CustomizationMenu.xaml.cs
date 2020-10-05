@@ -14,20 +14,13 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for MenuComponent.xaml
+    /// Interaction logic for CustomizationMenu.xaml
     /// </summary>
-    public partial class MenuComponent : UserControl
+    public partial class CustomizationMenu : UserControl
     {
-        public string buttonClicked;
-        public MenuComponent()
+        public CustomizationMenu()
         {
             InitializeComponent();
-        }
-
-        void ButtonClick(object sender, RoutedEventArgs e)
-        {
-            sender = (Button)sender;
-            buttonClicked = sender.ToString();
         }
     }
 }
