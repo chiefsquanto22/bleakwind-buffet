@@ -16,9 +16,9 @@ namespace PointOfSale.CustomControls
     /// <summary>
     /// Interaction logic for SailorSoda.xaml
     /// </summary>
-    public partial class SailorSoda : UserControl
+    public partial class SailorSodaCustom : UserControl
     {
-        public SailorSoda()
+        public SailorSodaCustom()
         {
             InitializeComponent();
         }
