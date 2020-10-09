@@ -7,6 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <StackPanel>
+            <CheckBox Content="Broccoli" IsChecked="True"/>
+            <CheckBox Content="Mushrooms" IsChecked="True"/>
+            <CheckBox Content="Tomato" IsChecked="True"/>
+            <CheckBox Content="Cheddar" IsChecked="True"/>
+        </StackPanel>
+        <Button Content="Done" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>

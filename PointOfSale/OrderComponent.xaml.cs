@@ -31,6 +31,7 @@ namespace PointOfSale
         {
             Button button = (Button)sender;
             totalOrder.Items.Add(button.Content);
+            
             currentListIndex++;
             HandleButtons();
         }

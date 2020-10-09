@@ -7,6 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <StackPanel>
+            <ComboBox  Width="100" HorizontalAlignment="Left">
+                <ComboBoxItem Content="Small"/>
+                <ComboBoxItem Content="Medium"/>
+                <ComboBoxItem Content="Large"/>
+            </ComboBox>
+        </StackPanel>
     </Grid>
 </UserControl>

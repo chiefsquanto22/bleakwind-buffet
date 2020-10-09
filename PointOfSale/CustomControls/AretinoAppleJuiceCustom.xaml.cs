@@ -16,9 +16,9 @@ namespace PointOfSale.CustomControls
     /// <summary>
     /// Interaction logic for DrinkCustom.xaml
     /// </summary>
-    public partial class DrinkCustom : UserControl
+    public partial class AretinoAppleJuiceCustom : UserControl
     {
-        public DrinkCustom()
+        public AretinoAppleJuiceCustom()
         {
             InitializeComponent();
         }

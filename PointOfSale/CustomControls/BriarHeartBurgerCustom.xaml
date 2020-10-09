@@ -13,6 +13,8 @@
             <CheckBox Content="Mustard" IsChecked="True"/>
             <CheckBox Content="Pickle" IsChecked="True"/>
             <CheckBox Content="Cheese" IsChecked="True"/>
+            
         </StackPanel>
+        <Button Content="Done" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>

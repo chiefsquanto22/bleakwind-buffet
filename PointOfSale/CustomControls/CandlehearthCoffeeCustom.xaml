@@ -7,6 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <StackPanel>
+            <CheckBox Content="Ice" IsChecked="False"/>
+            <CheckBox Content="Room for Cream" IsChecked="False"/>
+            <CheckBox Content="Decaf" IsChecked="False"/>
+            <ComboBox Width="100" HorizontalAlignment="Left">
+                <ComboBoxItem Content="Small"/>
+                <ComboBoxItem Content="Medium"/>
+                <ComboBoxItem Content="Large"/>
+            </ComboBox>
+        </StackPanel>
+        <Button Content="Done" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>
