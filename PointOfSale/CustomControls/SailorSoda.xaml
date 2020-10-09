@@ -8,10 +8,21 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel>
-            <CheckBox/>
-            <CheckBox/>
-            
+            <ComboBox  Width="100" HorizontalAlignment="Left">
+                <ComboBoxItem Content="Small"/>
+                <ComboBoxItem Content="Medium"/>
+                <ComboBoxItem Content="Large"/>
+            </ComboBox>
+            <ComboBox  Width="100" HorizontalAlignment="Left">
+                <ComboBoxItem Content="Blackberry"/>
+                <ComboBoxItem Content="Cherry"/>
+                <ComboBoxItem Content="Grapefruit"/>
+                <ComboBoxItem Content="Lemon"/>
+                <ComboBoxItem Content="Peach"/>
+                <ComboBoxItem Content="Watermelon"/>
+            </ComboBox>
         </StackPanel>
+        <Button Content="Done" VerticalAlignment="Bottom"/>
     </Grid>
     
 </UserControl>

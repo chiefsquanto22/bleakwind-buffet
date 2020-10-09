@@ -9,7 +9,6 @@
     <Grid >
         <StackPanel>
             <CheckBox Content="Ice"/>
-            
         </StackPanel>
         <Button Content="Done" VerticalAlignment="Bottom"/>
     </Grid>

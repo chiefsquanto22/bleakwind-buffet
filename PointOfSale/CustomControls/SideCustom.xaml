@@ -14,5 +14,6 @@
                 <ComboBoxItem Content="Large"/>
             </ComboBox>
         </StackPanel>
+        <Button Content="Done" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>
