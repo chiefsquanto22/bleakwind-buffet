@@ -25,24 +25,24 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        <local:MenuButton x:Name="BriarheartBurger" Click="AddItemToOrder" Content="Briarheart Burger" Grid.Column="0" Grid.Row="0" Background="OrangeRed"/>
-        <local:MenuButton x:Name="DoubleDragr" Click="AddItemToOrder" Content="Double Dragr" Grid.Column="0" Grid.Row="1" Background="OrangeRed"/>
-        <local:MenuButton x:Name="ThalmorTriple" Click="AddItemToOrder" Content="Thalmor Triple" Grid.Column="0" Grid.Row="2" Background="OrangeRed"/>
-        <local:MenuButton x:Name="GardenOrcOmelette" Click="AddItemToOrder" Content="Garden Orc Omelette" Grid.Column="0" Grid.Row="3" Background="OrangeRed"/>
-        <local:MenuButton x:Name="PhillyPoacher" Click="AddItemToOrder" Content="Philly Poacher" Grid.Column="0" Grid.Row="4" Background="OrangeRed"/>
-        <local:MenuButton x:Name="SmokehouseSkeleton" Click="AddItemToOrder" Content="Smokehouse Skeleton" Grid.Column="0" Grid.Row="5" Background="OrangeRed"/>
-        <local:MenuButton x:Name="ThugsTBone" Click="AddItemToOrder" Content="Thugs T-Bone" Grid.Column="0" Grid.Row="6" Background="OrangeRed"/>
-        <local:MenuButton x:Name="AretinoAppleJuice" Click="AddItemToOrder" Content="Aretino Applejuice" Grid.Column="1" Grid.Row="0" Background="Aqua"/>
-        <local:MenuButton x:Name="CandlehearthCoffee" Click="AddItemToOrder" Content="Candlehearth Coffee" Grid.Column="1" Grid.Row="1" Background="Aqua"/>
-        <local:MenuButton x:Name="MarkarthMilk" Click="AddItemToOrder" Content="Markarth Milk" Grid.Column="1" Grid.Row="2" Background="Aqua"/>
-        <local:MenuButton x:Name="SailorSoda" Click="AddItemToOrder" Content="Sailor Soda" Grid.Column="1" Grid.Row="3" Background="Aqua"/>
-        <local:MenuButton x:Name="WarriorWater" Click="AddItemToOrder" Content="Warrior Water" Grid.Column="1" Grid.Row="4" Background="Aqua"/>
-        <local:MenuButton x:Name="DragonbornWafflefries" Click="AddItemToOrder" Content="Dragonborn Wafflefries" Grid.Column="2" Grid.Row="0" Background="Yellow"/>
-        <local:MenuButton x:Name="FriedMiraak" Click="AddItemToOrder" Content="Fried Miraak" Grid.Column="2" Grid.Row="1" Background="Yellow"/>
-        <local:MenuButton x:Name="MadOtarGrits" Click="AddItemToOrder" Content="Mad Otar Grits" Grid.Column="2" Grid.Row="2" Background="Yellow"/>
-        <local:MenuButton x:Name="VokunSalad" Click="AddItemToOrder" Content="Vokun Salad" Grid.Column="2" Grid.Row="3" Background="Yellow"/>
-        <Button Name="modifyItem" Content="Modify Item" Click="ModifyItem" Grid.Row="7"/>
-        <Button Name="removeItem" Content="Remove Item" Click="RemoveItem" Grid.Row="7" Grid.Column="1" />
+        <local:MenuButton x:Name="BriarheartBurger"     Click="MenuButton_Click" Content="Briarheart Burger" Grid.Column="0" Grid.Row="0" Background="OrangeRed"/>
+        <local:MenuButton x:Name="DoubleDragr"          Click="MenuButton_Click" Content="Double Dragr" Grid.Column="0" Grid.Row="1" Background="OrangeRed"/>
+        <local:MenuButton x:Name="ThalmorTriple"        Click="MenuButton_Click" Content="Thalmor Triple" Grid.Column="0" Grid.Row="2" Background="OrangeRed"/>
+        <local:MenuButton x:Name="GardenOrcOmelette"    Click="MenuButton_Click" Content="Garden Orc Omelette" Grid.Column="0" Grid.Row="3" Background="OrangeRed"/>
+        <local:MenuButton x:Name="PhillyPoacher"        Click="MenuButton_Click" Content="Philly Poacher" Grid.Column="0" Grid.Row="4" Background="OrangeRed"/>
+        <local:MenuButton x:Name="SmokehouseSkeleton"   Click="MenuButton_Click" Content="Smokehouse Skeleton" Grid.Column="0" Grid.Row="5" Background="OrangeRed"/>
+        <local:MenuButton x:Name="ThugsTBone"           Click="MenuButton_Click" Content="Thugs T-Bone" Grid.Column="0" Grid.Row="6" Background="OrangeRed"/>
+        <local:MenuButton x:Name="AretinoAppleJuice"    Click="MenuButton_Click" Content="Aretino Applejuice" Grid.Column="1" Grid.Row="0" Background="Aqua"/>
+        <local:MenuButton x:Name="CandlehearthCoffee"   Click="MenuButton_Click" Content="Candlehearth Coffee" Grid.Column="1" Grid.Row="1" Background="Aqua"/>
+        <local:MenuButton x:Name="MarkarthMilk"         Click="MenuButton_Click" Content="Markarth Milk" Grid.Column="1" Grid.Row="2" Background="Aqua"/>
+        <local:MenuButton x:Name="SailorSoda"           Click="MenuButton_Click" Content="Sailor Soda" Grid.Column="1" Grid.Row="3" Background="Aqua"/>
+        <local:MenuButton x:Name="WarriorWater"         Click="MenuButton_Click" Content="Warrior Water" Grid.Column="1" Grid.Row="4" Background="Aqua"/>
+        <local:MenuButton x:Name="DragonbornWafflefries" Click="MenuButton_Click" Content="Dragonborn Wafflefries" Grid.Column="2" Grid.Row="0" Background="Yellow"/>
+        <local:MenuButton x:Name="FriedMiraak"          Click="MenuButton_Click" Content="Fried Miraak" Grid.Column="2" Grid.Row="1" Background="Yellow"/>
+        <local:MenuButton x:Name="MadOtarGrits"         Click="MenuButton_Click" Content="Mad Otar Grits" Grid.Column="2" Grid.Row="2" Background="Yellow"/>
+        <local:MenuButton x:Name="VokunSalad"           Click="MenuButton_Click" Content="Vokun Salad" Grid.Column="2" Grid.Row="3" Background="Yellow"/>
+        <Button Name="modifyItem"                       Click="ModifyItem" Content="Modify Item" Grid.Row="7"/>
+        <Button Name="removeItem"                       Click="RemoveItem" Content="Remove Item" Grid.Row="7" Grid.Column="1" />
         <ListBox x:Name="totalOrder" Grid.RowSpan="6" Grid.Column="3" Background="White"/>
         <TextBlock Name="priceBox" Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Background="White"/>
         <Border Name="containerBorder" Grid.ColumnSpan="3" Grid.RowSpan="7"/>

@@ -20,7 +20,7 @@ namespace PointOfSale
     public partial class OrderComponent : UserControl
     {
         private int currentListIndex = 0;
-        
+
         public OrderComponent()
         {
             InitializeComponent();
@@ -31,14 +31,14 @@ namespace PointOfSale
         {
             Button button = (Button)sender;
             totalOrder.Items.Add(button.Content);
-            
+
             currentListIndex++;
             HandleButtons();
         }
 
         void RemoveItem(object sender, RoutedEventArgs e)
         {
-            totalOrder.Items.Remove(totalOrder.SelectedItem); 
+            totalOrder.Items.Remove(totalOrder.SelectedItem);
             currentListIndex--;
             HandleButtons();
         }
@@ -50,12 +50,12 @@ namespace PointOfSale
         /// <param name="e"></param>
         void ModifyItem(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         void HandleButtons()
         {
-            if(totalOrder.Items.Count < 1)
+            if (totalOrder.Items.Count < 1)
             {
                 modifyItem.IsEnabled = false;
                 removeItem.IsEnabled = false;
@@ -68,9 +68,74 @@ namespace PointOfSale
             }
         }
 
-        private void BriarheartBurger_Click(object sender, RoutedEventArgs e)
+        private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Button button = (Button)sender;
+            
+            if (button.Name == "BriarHeartBurger")
+            {
+                containerBorder.Child = new BriarHeartBurgerCustom();
+            }
+            if (button.Name == "DoubleDragr")
+            {
+                containerBorder.Child = new DoubleDragrCustom();
+            }
+            if (button.Name == "ThalmorTriple")
+            {
+                containerBorder.Child = new ThalmorTripleCustom();
+            }
+            if (button.Name == "GardenOrcOmelette")
+            {
+                containerBorder.Child = new GardenOrcOmeletteCustom();
+            }
+            if (button.Name == "PhillyPoacher")
+            {
+                containerBorder.Child = new PhillyPoacherCustom();
+            }
+            if (button.Name == "SmokehouseSkeleton")
+            {
+                containerBorder.Child = new SmokehouseSkeletonCustom();
+            }
+            if (button.Name == "ThugsTBone")
+            {
+                containerBorder.Child = new ThugsTBoneCustom();
+            }
+            if (button.Name == "AretinoAppleJuice")
+            {
+                containerBorder.Child = new AretinoAppleJuiceCustom();
+            }
+            if (button.Name == "CandlehearthCoffee")
+            {
+                containerBorder.Child = new CandlerhearthCoffeeCustom();
+            }
+            if (button.Name == "MarkarthMilk")
+            {
+                containerBorder.Child = new MarkarthMilkCustom();
+            }
+            if (button.Name == "SailorSoda")
+            {
+                containerBorder.Child = new SailorSodaCustom();
+            }
+            if (button.Name == "WarriorWater")
+            {
+                containerBorder.Child = new WarriorWaterCustom();
+            }
+            if (button.Name == "DragonbornWafflefries")
+            {
+                containerBorder.Child = new SideCustom();
+            }
+            if (button.Name == "FriedMiraak")
+            {
+                containerBorder.Child = new SideCustom();
+            }
+            if (button.Name == "MadOtarGrits")
+            {
+                containerBorder.Child = new SideCustom();
+            }
+            if (button.Name == "VokunSalad")
+            {
+                containerBorder.Child = new SideCustom();
+            }
         }
     }
 }

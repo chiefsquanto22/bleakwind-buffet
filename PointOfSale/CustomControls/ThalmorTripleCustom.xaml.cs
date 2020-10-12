@@ -16,9 +16,9 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class ThalmorTripleCustom : UserControl
     {
-        public UserControl1()
+        public ThalmorTripleCustom()
         {
             InitializeComponent();
         }
