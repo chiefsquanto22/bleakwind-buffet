@@ -84,7 +84,7 @@ namespace PointOfSale
             {
                 containerBorder.Child = new ThalmorTripleCustom();
             }
-            if (button.Name == "GardenOrcOmelette")
+            /*if (button.Name == "GardenOrcOmelette")
             {
                 containerBorder.Child = new GardenOrcOmeletteCustom();
             }
@@ -95,10 +95,6 @@ namespace PointOfSale
             if (button.Name == "SmokehouseSkeleton")
             {
                 containerBorder.Child = new SmokehouseSkeletonCustom();
-            }
-            if (button.Name == "ThugsTBone")
-            {
-                containerBorder.Child = new ThugsTBoneCustom();
             }
             if (button.Name == "AretinoAppleJuice")
             {
@@ -119,7 +115,7 @@ namespace PointOfSale
             if (button.Name == "WarriorWater")
             {
                 containerBorder.Child = new WarriorWaterCustom();
-            }
+            }*/
             if (button.Name == "DragonbornWafflefries")
             {
                 containerBorder.Child = new SideCustom();
@@ -135,7 +131,11 @@ namespace PointOfSale
             if (button.Name == "VokunSalad")
             {
                 containerBorder.Child = new SideCustom();
-            }
+            }            
+        }
+        public void Done_Click(object sender, RoutedEventArgs e)
+        {
+            containerBorder.Child = null;
         }
     }
 }

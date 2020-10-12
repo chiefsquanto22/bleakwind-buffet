@@ -11,14 +11,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PointOfSale
+namespace PointOfSale.CustomControls
 {
     /// <summary>
-    /// Interaction logic for BriarHeartBurgerCustom.xaml
+    /// Interaction logic for WarriorWaterCustom.xaml
     /// </summary>
-    public partial class BriarHeartBurgerCustom : UserControl
+    public partial class WarriorWaterCustom : UserControl
     {
-        public BriarHeartBurgerCustom()
+        public WarriorWaterCustom()
         {
             InitializeComponent();
         }

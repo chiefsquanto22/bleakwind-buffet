@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid Background="White">
         <StackPanel>
-            <ComboBox  Width="100" HorizontalAlignment="Left">
+            <ComboBox Width="100" HorizontalAlignment="Left" SelectedItem="Small">
                 <ComboBoxItem Content="Small"/>
                 <ComboBoxItem Content="Medium"/>
                 <ComboBoxItem Content="Large"/>

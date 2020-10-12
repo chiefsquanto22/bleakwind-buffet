@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid Background="White">
         <StackPanel>
             <CheckBox Content="Bun" IsChecked="True"/>
             <CheckBox Content="Ketchup" IsChecked="True"/>
@@ -19,6 +19,6 @@
             <CheckBox Content="Bacon" IsChecked="True"/>
             <CheckBox Content="Egg" IsChecked="True"/>
         </StackPanel>
-        <Button Content="Done" VerticalAlignment="Bottom"/>
+        <Button x:Name="Done" Content="Done" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>

@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.CustomControls.AretinoAppleJuiceCustom"
+﻿<UserControl x:Class="PointOfSale.CustomControls.WarriorWaterCustom"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,8 +8,13 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
         <StackPanel>
-            <CheckBox Content="Ice"/>
+            <CheckBox Content="Ice" IsChecked="True"/>
+            <CheckBox Content="Lemon" IsChecked="False"/>
+            <ComboBox  Width="100" HorizontalAlignment="Left" SelectedItem="Small">
+                <ComboBoxItem Name="Small"  Content="Small"/>
+                <ComboBoxItem Content="Medium"/>
+                <ComboBoxItem Content="Large"/>
+            </ComboBox>
         </StackPanel>
-        <Button Content="Done" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>

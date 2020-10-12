@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:PointOfSale.CustomControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid Background="White">
         <StackPanel>
             <CheckBox Content="Broccoli" IsChecked="True"/>
             <CheckBox Content="Mushrooms" IsChecked="True"/>
