@@ -1,18 +1,17 @@
-﻿<UserControl x:Class="PointOfSale.CustomControls.SmokehouseSkeletonCustom"
+﻿<UserControl x:Class="PointOfSale.SmokehouseSkeletonCustom"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:PointOfSale.CustomControls"
+             xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
         <StackPanel>
-            <CheckBox Content="Sausage Link"/>
-            <CheckBox Content="Egg"/>
-            <CheckBox Content="Hash Browns"/>
-            <CheckBox Content="Pancake"/>
+            <CheckBox Content="Sausage Link" IsChecked="True"/>
+            <CheckBox Content="Egg" IsChecked="True"/>
+            <CheckBox Content="Hash Browns" IsChecked="True"/>
+            <CheckBox Content="Pancake" IsChecked="True"/>
         </StackPanel>
-        <Button Content="Done" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>

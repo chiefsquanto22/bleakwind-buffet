@@ -72,7 +72,7 @@ namespace PointOfSale
         {
             Button button = (Button)sender;
             
-            if (button.Name == "BriarHeartBurger")
+            if (button.Name == "BriarheartBurger")
             {
                 containerBorder.Child = new BriarHeartBurgerCustom();
             }
@@ -84,7 +84,7 @@ namespace PointOfSale
             {
                 containerBorder.Child = new ThalmorTripleCustom();
             }
-            /*if (button.Name == "GardenOrcOmelette")
+            if (button.Name == "GardenOrcOmelette")
             {
                 containerBorder.Child = new GardenOrcOmeletteCustom();
             }
@@ -102,11 +102,11 @@ namespace PointOfSale
             }
             if (button.Name == "CandlehearthCoffee")
             {
-                containerBorder.Child = new CandlerhearthCoffeeCustom();
+                containerBorder.Child = new CandlehearthCoffeeCustom();
             }
             if (button.Name == "MarkarthMilk")
             {
-                containerBorder.Child = new MarkarthMilkCustom();
+                containerBorder.Child = new AretinoAppleJuiceCustom();
             }
             if (button.Name == "SailorSoda")
             {
@@ -115,7 +115,7 @@ namespace PointOfSale
             if (button.Name == "WarriorWater")
             {
                 containerBorder.Child = new WarriorWaterCustom();
-            }*/
+            }
             if (button.Name == "DragonbornWafflefries")
             {
                 containerBorder.Child = new SideCustom();

@@ -19,6 +19,5 @@
             <CheckBox Content="Bacon" IsChecked="True"/>
             <CheckBox Content="Egg" IsChecked="True"/>
         </StackPanel>
-        <Button x:Name="Done" Content="Done" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>

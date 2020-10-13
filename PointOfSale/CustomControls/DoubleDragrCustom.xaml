@@ -17,6 +17,5 @@
             <CheckBox Content="Lettuce" IsChecked="True"/>
             <CheckBox Content="Mayo" IsChecked="True"/>
         </StackPanel>
-        <Button Content="Done" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>

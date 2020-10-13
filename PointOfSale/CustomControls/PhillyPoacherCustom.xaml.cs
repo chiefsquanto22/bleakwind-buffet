@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PointOfSale.CustomControls
+namespace PointOfSale
 {
     /// <summary>
     /// Interaction logic for PhillyPoacherCustom.xaml

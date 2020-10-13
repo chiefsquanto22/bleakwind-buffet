@@ -43,6 +43,7 @@
         <local:MenuButton x:Name="VokunSalad"           Click="MenuButton_Click" Content="Vokun Salad" Grid.Column="2" Grid.Row="3" Background="Yellow"/>
         <Button Name="modifyItem"                       Click="ModifyItem" Content="Modify Item" Grid.Row="7"/>
         <Button Name="removeItem"                       Click="RemoveItem" Content="Remove Item" Grid.Row="7" Grid.Column="1" />
+        <Button Name="doneButton"                             Click="Done_Click" Content="Done" Grid.Row="7" Grid.Column="2"/>
         <ListBox x:Name="totalOrder" Grid.RowSpan="6" Grid.Column="3" Background="White"/>
         <TextBlock Name="priceBox" Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Background="White"/>
         <Border Name="containerBorder" Grid.ColumnSpan="3" Grid.RowSpan="7"/>
