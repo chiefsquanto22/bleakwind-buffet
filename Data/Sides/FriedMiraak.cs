@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 
@@ -13,8 +14,9 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Creates objects to represent Fried Miraak
     /// </summary>
-    public class FriedMiraak : Side
+    public class FriedMiraak : Side, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <value>
         /// Private backing variable for Price
         /// </value>

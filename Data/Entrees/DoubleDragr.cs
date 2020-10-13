@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
@@ -12,8 +13,9 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class to represent the Double Dragr burger
     /// </summary>
-    public class DoubleDragr : Entree
+    public class DoubleDragr : Entree, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <value>
         /// Property that holds the price
         /// </value>

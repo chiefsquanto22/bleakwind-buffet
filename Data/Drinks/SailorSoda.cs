@@ -7,13 +7,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
-
+using System.ComponentModel;
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// Class to represent the Sailor's Soda option
     /// </summary>
-    public class SailorSoda : Drink
+    public class SailorSoda : Drink, INotifyPropertyChanged
     {
         /// <value>
         /// Private backing variable for Price
@@ -100,5 +100,7 @@ namespace BleakwindBuffet.Data.Drinks
         {
             return Size.ToString() +" "+ Flavor.ToString() + " Sailor Soda";
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

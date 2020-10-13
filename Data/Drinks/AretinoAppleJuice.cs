@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 
@@ -13,8 +14,9 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class for the Aretino Apple Juice
     /// </summary>
-    public class AretinoAppleJuice : Drink
+    public class AretinoAppleJuice : Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <value>
         /// Property to hold the Price of the beverage based on size

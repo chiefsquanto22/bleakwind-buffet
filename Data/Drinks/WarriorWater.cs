@@ -7,13 +7,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// Creates an object to represent Warrior Water
     /// </summary>
-    public class WarriorWater : Drink
+    public class WarriorWater : Drink, INotifyPropertyChanged
     {
         /// <value>
         /// Property to hold price
@@ -35,6 +36,8 @@ namespace BleakwindBuffet.Data.Drinks
         /// </value>
         public bool Lemon { get; set; } = false;
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <value>
         /// Creates a list of special instructions for the order
         /// </value>
@@ -48,6 +51,8 @@ namespace BleakwindBuffet.Data.Drinks
                 return specials;
             }
         }
+
+        
 
         /// <summary>
         /// Overrides the generic ToString() method

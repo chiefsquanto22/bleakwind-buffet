@@ -5,6 +5,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 namespace BleakwindBuffet.Data.Sides
@@ -12,8 +13,9 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Creates an object to represent Dragonborn Waffle Fries
     /// </summary>
-    public class DragonbornWaffleFries : Side
+    public class DragonbornWaffleFries : Side, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <value>
         /// private backing variable for Price
         /// </value>
