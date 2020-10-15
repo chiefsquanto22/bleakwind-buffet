@@ -29,17 +29,53 @@ namespace BleakwindBuffet.Data.Entrees
         /// <value>
         /// Property to hold status of the sirloin. Default true.
         /// </value>
-        public bool Sirloin { get; set; } = true;
+        public bool Sirloin
+        {
+            get => sirloin;
+            set
+            {
+                if (sirloin != value)
+                {
+                    sirloin = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sirloin"));
+                }
+            }
+        }
+        private bool sirloin = true;
 
         /// <value>
         /// Property to hold status of the onion. Default true.
         /// </value>
-        public bool Onion { get; set; } = true;
+        public bool Onion
+        {
+            get => onion;
+            set
+            {
+                if (onion != value)
+                {
+                    onion = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Onion"));
+                }
+            }
+        }
+        private bool onion = true;
 
         /// <value>
         /// Property to hold status of the roll. Default true.
         /// </value>
-        public bool Roll { get; set; } = true;
+        public bool Roll
+        {
+            get => roll;
+            set
+            {
+                if (roll != value)
+                {
+                    roll = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Roll"));
+                }
+            }
+        }
+        private bool roll = true;
 
         /// <value>
         /// List holding special instructions for the order

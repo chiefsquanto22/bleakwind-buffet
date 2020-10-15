@@ -16,7 +16,6 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public class FriedMiraak : Side, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
         /// <value>
         /// Private backing variable for Price
         /// </value>

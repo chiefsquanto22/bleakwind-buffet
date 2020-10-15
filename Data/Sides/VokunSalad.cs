@@ -16,7 +16,6 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public class VokunSalad : Side, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
         /// <value>
         /// private backing variable for Price
         /// </value>

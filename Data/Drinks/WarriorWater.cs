@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 using System.ComponentModel;
+using System.Xml.Schema;
 
 namespace BleakwindBuffet.Data.Drinks
 {
@@ -26,17 +27,40 @@ namespace BleakwindBuffet.Data.Drinks
         /// </value>
         public override uint Calories { get => 0; }
 
+        private bool ice = true;
         /// <value>
         /// Property to hold status of ice
         /// </value>
-        public bool Ice { get; set; } = true;
+        public bool Ice
+        {
+            get => ice;
+            set
+            {
+                if (ice != value)
+                {
+                    ice = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                }
+            }
+        }
 
+        private bool lemon = false;
         /// <value>
         /// property to hold status of lemon
         /// </value>
-        public bool Lemon { get; set; } = false;
-
-        public event PropertyChangedEventHandler PropertyChanged;
+        public bool Lemon
+        {
+            get => lemon;
+            set
+            {
+                if (lemon != value)
+                {
+                    lemon = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
+                }
+            }
+        }
+        public override event PropertyChangedEventHandler PropertyChanged;
 
         /// <value>
         /// Creates a list of special instructions for the order

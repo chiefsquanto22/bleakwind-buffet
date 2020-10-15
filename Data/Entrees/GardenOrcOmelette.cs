@@ -29,22 +29,70 @@ namespace BleakwindBuffet.Data.Entrees
         /// <value>
         /// Property to hold status of the broccoli. Default true.
         /// </value>
-        public bool Broccoli { get; set; } = true;
+        public bool Broccoli
+        {
+            get => broccoli;
+            set
+            {
+                if (broccoli != value)
+                {
+                    broccoli = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Broccoli"));
+                }
+            }
+        }
+        private bool broccoli = true;
 
         /// <value>
         /// Property to hold status of the mushrooms. Default true.
         /// </value>
-        public bool Mushrooms { get; set; } = true;
+        public bool Mushrooms
+        {
+            get => mushrooms;
+            set
+            {
+                if (mushrooms != value)
+                {
+                    mushrooms = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mushrooms"));
+                }
+            }
+        }
+        private bool mushrooms = true;
 
         /// <value>
         /// Property to hold status of the tomato. Default true.
         /// </value>
-        public bool Tomato { get; set; } = true;
+        public bool Tomato
+        {
+            get => tomato;
+            set
+            {
+                if (tomato != value)
+                {
+                    tomato = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tomato"));
+                }
+            }
+        }
+        private bool tomato = true;
 
         /// <value>
         /// Property to hold status of the cheddar. Default true.
         /// </value>
-        public bool Cheddar { get; set; } = true;
+        public bool Cheddar
+        {
+            get => cheddar;
+            set
+            {
+                if (cheddar != value)
+                {
+                    cheddar = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheddar"));
+                }
+            }
+        }
+        private bool cheddar = true;
 
         /// <value>
         /// List containing special instructions for the order

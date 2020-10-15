@@ -15,7 +15,6 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public class DragonbornWaffleFries : Side, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
         /// <value>
         /// private backing variable for Price
         /// </value>

@@ -29,22 +29,70 @@ namespace BleakwindBuffet.Data.Entrees
         /// <value>
         /// Property to hold status of the sausage links. Default true.
         /// </value>
-        public bool SausageLink { get; set; } = true;
+        public bool SausageLink
+        {
+            get => sausagelink;
+            set
+            {
+                if (sausagelink != value)
+                {
+                    sausagelink = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SausageLink"));
+                }
+            }
+        }
+        private bool sausagelink = true;
 
         /// <value>
         /// Property to hold status of the egg. Default true.
         /// </value>
-        public bool Egg { get; set; } = true;
+        public bool Egg
+        {
+            get => egg;
+            set
+            {
+                if (egg != value)
+                {
+                    egg = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Egg"));
+                }
+            }
+        }
+        private bool egg = true;
 
         /// <value>
         /// Property to hold status of the hash browns. Default true.
         /// </value>
-        public bool HashBrowns { get; set; } = true;
+        public bool HashBrowns
+        {
+            get => hashbrowns;
+            set
+            {
+                if (hashbrowns != value)
+                {
+                    hashbrowns = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HashBrowns"));
+                }
+            }
+        }
+        private bool hashbrowns = true;
 
         /// <value>
         /// Property to hold status of the pancake. Default true.
         /// </value>
-        public bool Pancake { get; set; } = true;
+        public bool Pancake
+        {
+            get => pancake;
+            set
+            {
+                if (pancake != value)
+                {
+                    pancake = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pancake"));
+                }
+            }
+        }
+        private bool pancake = true;
 
         /// <value>
         /// List of special instructions for the order

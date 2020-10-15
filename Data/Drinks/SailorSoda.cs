@@ -62,22 +62,46 @@ namespace BleakwindBuffet.Data.Drinks
                 {
                     calories = 153;
                 }
-                if(Size.Equals(Size.Large))
+                if (Size.Equals(Size.Large))
                 {
                     calories = 205;
                 }
                 return calories;
             }
         }
+        private bool ice = true;
         /// <value>
-        /// Property to hold status of Ice in the order
+        /// Property to hold status of ice
         /// </value>
-        public bool Ice { get; set; } = true;
+        public bool Ice
+        {
+            get => ice;
+            set
+            {
+                if (ice != value)
+                {
+                    ice = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                }
+            }
+        }
 
+        private SodaFlavor flavor = SodaFlavor.Cherry;
         /// <value>
         /// Property to hold the flavor of the soda
         /// </value>
-        public SodaFlavor Flavor { get; set; } = SodaFlavor.Cherry;
+        public SodaFlavor Flavor
+        {
+            get => flavor;
+            set
+            {
+                if(flavor!= value)
+                {
+                    flavor = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Flavor"));
+                }
+            }
+        }
 
         /// <value>
         /// List of special instructions to modify the order
@@ -98,9 +122,9 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns> a string witht the size and flavor of the Sailor's Soda</returns>
         public override string ToString()
         {
-            return Size.ToString() +" "+ Flavor.ToString() + " Sailor Soda";
+            return Size.ToString() + " " + Flavor.ToString() + " Sailor Soda";
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public override event PropertyChangedEventHandler PropertyChanged;
     }
 }

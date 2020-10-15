@@ -16,7 +16,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class CandlehearthCoffee : Drink, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public override event PropertyChangedEventHandler PropertyChanged;
         /// <value>
         /// Property to hold the Price of the beverage based on Size
         /// </value>
@@ -42,7 +42,8 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// Property to hold the number of Calories based on Size
         /// </value>
-        public override uint Calories {
+        public override uint Calories
+        {
             get
             {
                 if (Size.Equals(Size.Small))
@@ -60,21 +61,43 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        private bool ice = false;
         /// <value>
-        /// Property to hold the status of Ice ing the beverage
+        /// Property to hold status of ice
         /// </value>
-        /// /// <remarks>
-        /// Default value is false
-        /// </remarks>
-        public bool Ice { get; set; } = false;
+        public bool Ice
+        {
+            get => ice;
+            set
+            {
+                if (ice != value)
+                {
+                    ice = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                }
+            }
+        }
 
+        private bool roomforcream = false;
         /// <value>
         /// Property to hold the status of whether or not the order calls for cream
         /// </value>
         /// <remarks>
         /// Default value is false
         /// </remarks>
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream
+        {
+            get => roomforcream;
+
+            set
+            {
+                if (roomforcream != value)
+                {
+                    roomforcream = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RoomForCream"));
+                }
+            }
+        }
 
         /// <value>
         /// Property to hold whether or not the order calls for decaf coffee
@@ -107,7 +130,7 @@ namespace BleakwindBuffet.Data.Drinks
             if (Decaf == true)
             {
                 return Size.ToString() + " Decaf Candlehearth Coffee";
-                
+
             }
             else
             {

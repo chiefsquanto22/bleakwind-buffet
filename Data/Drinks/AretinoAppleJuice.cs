@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 
@@ -16,7 +17,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class AretinoAppleJuice : Drink, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public override event PropertyChangedEventHandler PropertyChanged;
 
         /// <value>
         /// Property to hold the Price of the beverage based on size
@@ -61,10 +62,22 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        private bool ice = false;
         /// <value>
-        /// Property to hold the status of Ice on the order. Default false.
+        /// Property to hold status of ice
         /// </value>
-        public bool Ice { get; set; } = false;
+        public bool Ice
+        {
+            get => ice;
+            set
+            {
+                if (ice != value)
+                {
+                    ice = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                }
+            }
+        }
 
         /// <value>
         /// List to hold any special instructions for the order

@@ -27,54 +27,173 @@ namespace BleakwindBuffet.Data.Entrees
         public override uint Calories { get => 943; }
 
         /// <value>
-        /// Property to hold status of the bun. Default true.
+        /// Property to hold status of the tomato. Default true.
         /// </value>
-        public bool Bun { get; set; } = true;
-
+        public bool Bun
+        { 
+            get => bun;
+            set
+            {
+                if (bun != value)
+                {
+                    bun = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bun"));
+                }
+            }
+        }
+        private bool bun = true;
         /// <value>
         /// Property to hold status of the ketchup. Default true.
         /// </value>
-        public bool Ketchup { get; set; } = true;
+        public bool Ketchup
+        {
+            get => ketchup;
+            set
+            {
+                if (ketchup != value)
+                {
+                    ketchup = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ketchup"));
+                }
+            }
+        }
+        private bool ketchup = true;
 
         /// <value>
         /// Property to hold status of the mustard. Default true.
         /// </value>
-        public bool Mustard { get; set; } = true;
+        public bool Mustard
+        {
+            get => mustard;
+            set
+            {
+                if (mustard != value)
+                {
+                    mustard = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mustard"));
+                }
+            }
+        }
+        private bool mustard = true;
 
         /// <value>
         /// Property to hold status of the pickle. Default true.
         /// </value>
-        public bool Pickle { get; set; } = true;
+        public bool Pickle
+        {
+            get => pickle;
+            set
+            {
+                if (pickle != value)
+                {
+                    pickle = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
+                }
+            }
+        }
+        private bool pickle = true;
 
         /// <value>
         /// Property to hold status of the cheese. Default true.
         /// </value>
-        public bool Cheese { get; set; } = true;
+        public bool Cheese
+        {
+            get => cheese;
+            set
+            {
+                if (cheese != value)
+                {
+                    cheese = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
+                }
+            }
+        }
+        private bool cheese = true;
 
         /// <value>
         /// Property to hold status of the tomato. Default true.
         /// </value>
-        public bool Tomato { get; set; } = true;
+        public bool Tomato
+        {
+            get => tomato;
+            set
+            {
+                if (tomato != value)
+                {
+                    tomato = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tomato"));
+                }
+            }
+        }
+        private bool tomato = true;
 
         /// <value>
         /// Property to hold status of the lettuce. Default true.
         /// </value>
-        public bool Lettuce { get; set; } = true;
+        public bool Lettuce
+        {
+            get => lettuce;
+            set
+            {
+                if (lettuce != value)
+                {
+                    lettuce = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lettuce"));
+                }
+            }
+        }
+        private bool lettuce = true;
 
         /// <value>
         /// Property to hold status of the mayo. Default true.
         /// </value>
-        public bool Mayo { get; set; } = true;
+        public bool Mayo
+        {
+            get => mayo;
+            set
+            {
+                if (mayo != value)
+                {
+                    mayo = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mayo"));
+                }
+            }
+        }
+        private bool mayo = true;
 
         /// <value>
         /// Property to hold status of the bacon. Default true.
         /// </value>
-        public bool Bacon { get; set; } = true;
+        public bool Bacon
+        {
+            get => bacon;
+            set
+            {
+                if (bacon != value)
+                {
+                    bacon = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bacon"));
+                }
+            }
+        }
+        private bool bacon = true;
 
         /// <value>
         /// Property to hold status of the egg. Default true.
         /// </value>
-        public bool Egg { get; set; } = true;
+        public bool Egg
+        {
+            get => egg;
+            set
+            {
+                if (egg != value)
+                {
+                    egg = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Egg"));
+                }
+            }
+        }
+        private bool egg = true;
 
         /// <value>
         /// A list containing special instructions based on the order
