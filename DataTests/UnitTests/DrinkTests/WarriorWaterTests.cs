@@ -13,6 +13,48 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class WarriorWaterTests
     {
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            var var = new WarriorWater();
+            Assert.PropertyChanged(var, "Size", () =>
+            {
+                var.Size = size;
+            });
+        }
+        [Fact]
+        public void ChangingLemonNotifiesLemonProperty()
+        {
+            var AJ = new WarriorWater();
+
+            Assert.PropertyChanged(AJ, "Lemon", () =>
+            {
+                AJ.Lemon = false;
+            });
+
+            Assert.PropertyChanged(AJ, "Lemon", () =>
+            {
+                AJ.Lemon = true;
+            });
+        }
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var AJ = new WarriorWater();
+
+            Assert.PropertyChanged(AJ, "Ice", () =>
+            {
+                AJ.Ice = true;
+            });
+
+            Assert.PropertyChanged(AJ, "Ice", () =>
+            {
+                AJ.Ice = false;
+            });
+        }
         [Fact]
         public void ShouldBeADrink()
         {
