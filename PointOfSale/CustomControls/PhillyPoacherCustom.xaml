@@ -8,9 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
         <StackPanel>
-            <CheckBox Content="Sirloin" IsChecked="True"/>
-            <CheckBox Content="Onion" IsChecked="True"/>
-            <CheckBox Content="Roll" IsChecked="True"/>
+            <CheckBox Content="Sirloin" IsChecked="{Binding Path=Sirloin}"/>
+            <CheckBox Content="Onion"   IsChecked="{Binding Path=Onion}"/>
+            <CheckBox Content="Roll"    IsChecked="{Binding Path=Roll}"/>
         </StackPanel>
     </Grid>
 </UserControl>

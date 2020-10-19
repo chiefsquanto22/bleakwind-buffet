@@ -8,10 +8,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
         <StackPanel>
-            <CheckBox Content="Ice" IsChecked="True"/>
-            <CheckBox Content="Lemon" IsChecked="False"/>
-            <ComboBox  Width="100" HorizontalAlignment="Left" SelectedItem="Small">
-                <ComboBoxItem Name="Small"  Content="Small"/>
+            <CheckBox Content="Ice" IsChecked="{Binding Path=Ice}"/>
+            <CheckBox Content="Lemon" IsChecked="{Binding Path=Lemon}"/>
+            <ComboBox  Width="100" HorizontalAlignment="Left" SelectedItem="{Binding Path=Size}">
+                <ComboBoxItem Content="Small"/>
                 <ComboBoxItem Content="Medium"/>
                 <ComboBoxItem Content="Large"/>
             </ComboBox>

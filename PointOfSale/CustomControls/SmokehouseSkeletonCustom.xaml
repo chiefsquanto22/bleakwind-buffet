@@ -8,10 +8,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
         <StackPanel>
-            <CheckBox Content="Sausage Link" IsChecked="True"/>
-            <CheckBox Content="Egg" IsChecked="True"/>
-            <CheckBox Content="Hash Browns" IsChecked="True"/>
-            <CheckBox Content="Pancake" IsChecked="True"/>
+            <CheckBox Content="Sausage Link"    IsChecked="{Binding Path=SausageLink}"/>
+            <CheckBox Content="Egg"             IsChecked="{Binding Path=Egg}"/>
+            <CheckBox Content="Hash Browns"     IsChecked="{Binding Path=HashBrowns}"/>
+            <CheckBox Content="Pancake"         IsChecked="{Binding Path=Pancake}"/>
         </StackPanel>
     </Grid>
 </UserControl>

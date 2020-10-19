@@ -126,19 +126,19 @@ namespace PointOfSale
             if (button.Name == "MarkarthMilk")
             {
                 var item = new MarkarthMilkCustom();
-                item.DataContext = new MarkarthMilkCustom();
+                item.DataContext = new MarkarthMilk();
                 containerBorder.Child = item;
             }
             if (button.Name == "SailorSoda")
             {
-                var item = new BriarheartBurgerCustom();
-                item.DataContext = new BriarheartBurger();
+                var item = new SailorSodaCustom();
+                item.DataContext = new SailorSoda();
                 containerBorder.Child = item;
             }
             if (button.Name == "WarriorWater")
             {
-                var item = new SailorSodaCustom();
-                item.DataContext = new SailorSoda();
+                var item = new WarriorWaterCustom();
+                item.DataContext = new WarriorWater();
                 containerBorder.Child = item;
             }
             if (button.Name == "DragonbornWafflefries")

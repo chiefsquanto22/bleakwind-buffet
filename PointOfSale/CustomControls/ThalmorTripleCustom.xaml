@@ -8,16 +8,16 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
         <StackPanel>
-            <CheckBox Content="Bun" IsChecked="True"/>
-            <CheckBox Content="Ketchup" IsChecked="True"/>
-            <CheckBox Content="Mustard" IsChecked="True"/>
-            <CheckBox Content="Pickle" IsChecked="True"/>
-            <CheckBox Content="Cheese" IsChecked="True"/>
-            <CheckBox Content="Tomato" IsChecked="True"/>
-            <CheckBox Content="Lettuce" IsChecked="True"/>
-            <CheckBox Content="Mayo" IsChecked="True"/>
-            <CheckBox Content="Bacon" IsChecked="True"/>
-            <CheckBox Content="Egg" IsChecked="True"/>
+            <CheckBox Content="Bun"     IsChecked="{Binding Path=Bun}"/>
+            <CheckBox Content="Ketchup" IsChecked="{Binding Path=Ketchup}"/>
+            <CheckBox Content="Mustard" IsChecked="{Binding Path=Mustard}"/>
+            <CheckBox Content="Pickle"  IsChecked="{Binding Path=Pickle}"/>
+            <CheckBox Content="Cheese"  IsChecked="{Binding Path=Cheese}"/>
+            <CheckBox Content="Tomato"  IsChecked="{Binding Path=Tomato}"/>
+            <CheckBox Content="Lettuce" IsChecked="{Binding Path=Lettuce}"/>
+            <CheckBox Content="Mayo"    IsChecked="{Binding Path=Mayo}"/>
+            <CheckBox Content="Bacon"   IsChecked="{Binding Path=Bacon}"/>
+            <CheckBox Content="Egg"     IsChecked="{Binding Path=Egg}"/>
         </StackPanel>
     </Grid>
 </UserControl>
