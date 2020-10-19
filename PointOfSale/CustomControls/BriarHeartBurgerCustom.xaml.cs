@@ -16,9 +16,9 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for BriarHeartBurgerCustom.xaml
     /// </summary>
-    public partial class BriarHeartBurgerCustom : UserControl
+    public partial class BriarheartBurgerCustom : UserControl
     {
-        public BriarHeartBurgerCustom()
+        public BriarheartBurgerCustom()
         {
             InitializeComponent();
         }

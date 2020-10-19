@@ -74,7 +74,7 @@ namespace PointOfSale
             
             if (button.Name == "BriarheartBurger")
             {
-                containerBorder.Child = new BriarHeartBurgerCustom();
+                containerBorder.Child = new BriarheartBurgerCustom();
             }
             if (button.Name == "DoubleDragr")
             {

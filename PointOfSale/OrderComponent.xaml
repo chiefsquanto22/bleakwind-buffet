@@ -25,7 +25,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        <local:MenuButton x:Name="BriarheartBurger"     Click="MenuButton_Click" Content="Briarheart Burger" Grid.Column="0" Grid.Row="0" Background="OrangeRed"/>
+        <local:MenuButton x:Name="BriarheartBurger"     DataContext="{Binding Path=BriarheartBurger}"     Click="MenuButton_Click" Content="Briarheart Burger" Grid.Column="0" Grid.Row="0" Background="OrangeRed"/>
         <local:MenuButton x:Name="DoubleDragr"          Click="MenuButton_Click" Content="Double Dragr" Grid.Column="0" Grid.Row="1" Background="OrangeRed"/>
         <local:MenuButton x:Name="ThalmorTriple"        Click="MenuButton_Click" Content="Thalmor Triple" Grid.Column="0" Grid.Row="2" Background="OrangeRed"/>
         <local:MenuButton x:Name="GardenOrcOmelette"    Click="MenuButton_Click" Content="Garden Orc Omelette" Grid.Column="0" Grid.Row="3" Background="OrangeRed"/>
