@@ -15,6 +15,49 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class SailorSodaTests
     {
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            var var = new SailorSoda();
+            Assert.PropertyChanged(var, "Size", () =>
+            {
+                var.Size = size;
+            });
+        }
+        [Theory]
+        [InlineData(SodaFlavor.Cherry)]
+        [InlineData(SodaFlavor.Blackberry)]
+        [InlineData(SodaFlavor.Grapefruit)]
+        [InlineData(SodaFlavor.Lemon)]
+        [InlineData(SodaFlavor.Peach)]
+        [InlineData(SodaFlavor.Watermelon)]
+        public void ChangingFlavorNotifiesFlavorProperty(SodaFlavor flavor)
+        {
+            var AJ = new SailorSoda();
+
+            Assert.PropertyChanged(AJ, "Flavor", () =>
+            {
+                AJ.Flavor = flavor;
+            });
+        }
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var AJ = new SailorSoda();
+
+            Assert.PropertyChanged(AJ, "Ice", () =>
+            {
+                AJ.Ice = true;
+            });
+
+            Assert.PropertyChanged(AJ, "Ice", () =>
+            {
+                AJ.Ice = false;
+            });
+        }
         [Fact]
         public void ShouldBeADrink()
         {
@@ -117,7 +160,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             co.Ice = includeIce;
             if (!includeIce) Assert.Contains("Hold ice", co.SpecialInstructions);
         }
-        
+
         [Theory]
         [InlineData(SodaFlavor.Cherry, Size.Small, "Small Cherry Sailor Soda")]
         [InlineData(SodaFlavor.Cherry, Size.Medium, "Medium Cherry Sailor Soda")]

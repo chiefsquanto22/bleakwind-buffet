@@ -99,13 +99,25 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        private bool decaf = false;
         /// <value>
         /// Property to hold whether or not the order calls for decaf coffee
         /// </value>
         /// /// <remarks>
         /// Default value is false
         /// </remarks>
-        public bool Decaf { get; set; } = false;
+        public bool Decaf 
+        { 
+            get => decaf;
+            set
+            {
+                if (decaf != value)
+                {
+                    decaf = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Decaf"));
+                }
+            }
+        }
 
         /// <value>
         /// List to hold any special instructions for the order

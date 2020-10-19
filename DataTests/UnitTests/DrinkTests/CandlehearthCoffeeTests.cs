@@ -13,6 +13,63 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class CandlehearthCoffeeTests
     {
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            var var = new CandlehearthCoffee();
+            Assert.PropertyChanged(var, "Size", () =>
+            {
+                var.Size = size;
+            });
+        }
+        [Fact]
+        public void ChangingRfCNotifiesRfCProperty()
+        {
+            var AJ = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(AJ, "RoomForCream", () =>
+            {
+                AJ.RoomForCream = true;
+            });
+
+            Assert.PropertyChanged(AJ, "RoomForCream", () =>
+            {
+                AJ.RoomForCream = false;
+            });
+        }
+        [Fact]
+        public void ChangingDecafNotifiesDecafProperty()
+        {
+            var AJ = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(AJ, "Decaf", () =>
+            {
+                AJ.Decaf = true;
+            });
+
+            Assert.PropertyChanged(AJ, "Decaf", () =>
+            {
+                AJ.Decaf = false;
+            });
+        }
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var AJ = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(AJ, "Ice", () =>
+            {
+                AJ.Ice = true;
+            });
+
+            Assert.PropertyChanged(AJ, "Ice", () =>
+            {
+                AJ.Ice = false;
+            });
+        }
         [Fact]
         public void ShouldBeADrink()
         {

@@ -13,6 +13,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class MadOtarGritsTests
     {
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            var var = new MadOtarGrits();
+            Assert.PropertyChanged(var, "Size", () =>
+            {
+                var.Size = size;
+            });
+        }
         [Fact]
         public void ShouldBeASide()
         {
