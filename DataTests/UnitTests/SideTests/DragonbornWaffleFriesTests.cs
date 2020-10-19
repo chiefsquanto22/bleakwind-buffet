@@ -19,7 +19,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [InlineData(Size.Large)]
         public void ChangingSizeNotifiesSizeProperty(Size size)
         {
-            var var = new DragonbornWaffleFries();
+            var var = new DragonbornWafflefries();
             Assert.PropertyChanged(var, "Size", () =>
             {
                 var.Size = size;
@@ -28,26 +28,26 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [Fact]
         public void ShouldBeASide()
         {
-            DragonbornWaffleFries aj = new DragonbornWaffleFries();
+            DragonbornWafflefries aj = new DragonbornWafflefries();
             Assert.IsAssignableFrom<Side>(aj);
         }
         [Fact]
         public void ShouldBeAnIOrderItem()
         {
-            DragonbornWaffleFries aj = new DragonbornWaffleFries();
+            DragonbornWafflefries aj = new DragonbornWafflefries();
             Assert.IsAssignableFrom<IOrderItem>(aj);
         }
         [Fact]
         public void ShouldBeSmallByDefault()
         {
-            DragonbornWaffleFries aj = new DragonbornWaffleFries();
+            DragonbornWafflefries aj = new DragonbornWafflefries();
             Assert.Equal(Size.Small, aj.Size);
         }
 
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
-            DragonbornWaffleFries aj = new DragonbornWaffleFries();
+            DragonbornWafflefries aj = new DragonbornWafflefries();
             aj.Size = Size.Medium;
             Assert.Equal(Size.Medium, aj.Size);
             aj.Size = Size.Large;
@@ -59,7 +59,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [Fact]
         public void ShouldReturnCorrectSpecialInstructions()
         {
-            DragonbornWaffleFries aj = new DragonbornWaffleFries();
+            DragonbornWafflefries aj = new DragonbornWafflefries();
             Assert.Empty(aj.SpecialInstructions);
         }
 
@@ -69,7 +69,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [InlineData(Size.Large, 0.96)]
         public void ShouldReturnCorrectPriceBasedOnSize(Size size, double price)
         {
-            DragonbornWaffleFries aj = new DragonbornWaffleFries();
+            DragonbornWafflefries aj = new DragonbornWafflefries();
             aj.Size = size;
             Assert.Equal(price, aj.Price);
         }
@@ -80,7 +80,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [InlineData(Size.Large, 100)]
         public void ShouldReturnCorrectCaloriesBasedOnSize(Size size, uint cal)
         {
-            DragonbornWaffleFries aj = new DragonbornWaffleFries();
+            DragonbornWafflefries aj = new DragonbornWafflefries();
             aj.Size = size;
             Assert.Equal(cal, aj.Calories);
         }
@@ -91,7 +91,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [InlineData(Size.Large, "Large Dragonborn Waffle Fries")]
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
-            DragonbornWaffleFries aj = new DragonbornWaffleFries();
+            DragonbornWafflefries aj = new DragonbornWafflefries();
             aj.Size = size;
             Assert.Equal(name, aj.ToString());
         }

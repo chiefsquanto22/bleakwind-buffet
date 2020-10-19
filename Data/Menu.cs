@@ -57,11 +57,11 @@ namespace BleakwindBuffet.Data
             VokunSalad acs = new VokunSalad();
             acs.Size = Enums.Size.Large;
 
-            DragonbornWaffleFries bas = new DragonbornWaffleFries();
+            DragonbornWafflefries bas = new DragonbornWafflefries();
             bas.Size = Enums.Size.Small;
-            DragonbornWaffleFries bbs = new DragonbornWaffleFries();
+            DragonbornWafflefries bbs = new DragonbornWafflefries();
             bbs.Size = Enums.Size.Medium;
-            DragonbornWaffleFries bcs = new DragonbornWaffleFries();
+            DragonbornWafflefries bcs = new DragonbornWafflefries();
             bcs.Size = Enums.Size.Large;
 
             MadOtarGrits cas = new MadOtarGrits();
@@ -268,11 +268,11 @@ namespace BleakwindBuffet.Data
             VokunSalad acs = new VokunSalad();
             acs.Size = Enums.Size.Large;
 
-            DragonbornWaffleFries bas = new DragonbornWaffleFries();
+            DragonbornWafflefries bas = new DragonbornWafflefries();
             bas.Size = Enums.Size.Small;
-            DragonbornWaffleFries bbs = new DragonbornWaffleFries();
+            DragonbornWafflefries bbs = new DragonbornWafflefries();
             bbs.Size = Enums.Size.Medium;
-            DragonbornWaffleFries bcs = new DragonbornWaffleFries();
+            DragonbornWafflefries bcs = new DragonbornWafflefries();
             bcs.Size = Enums.Size.Large;
 
             MadOtarGrits cas = new MadOtarGrits();

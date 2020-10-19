@@ -1,4 +1,7 @@
 ﻿using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Entrees;
+using BleakwindBuffet.Data.Sides;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -74,63 +77,93 @@ namespace PointOfSale
             
             if (button.Name == "BriarheartBurger")
             {
-                containerBorder.Child = new BriarheartBurgerCustom();
+                var item = new BriarheartBurgerCustom();
+                item.DataContext = new BriarheartBurger();
+                containerBorder.Child = item;
             }
             if (button.Name == "DoubleDragr")
             {
-                containerBorder.Child = new DoubleDragrCustom();
+                var item = new DoubleDragrCustom();
+                item.DataContext = new DoubleDragr();
+                containerBorder.Child = item;
             }
             if (button.Name == "ThalmorTriple")
             {
-                containerBorder.Child = new ThalmorTripleCustom();
+                var item = new ThalmorTripleCustom();
+                item.DataContext = new ThalmorTriple();
+                containerBorder.Child = item;
             }
             if (button.Name == "GardenOrcOmelette")
             {
-                containerBorder.Child = new GardenOrcOmeletteCustom();
+                var item = new GardenOrcOmeletteCustom();
+                item.DataContext = new GardenOrcOmelette();
+                containerBorder.Child = item;
             }
             if (button.Name == "PhillyPoacher")
             {
-                containerBorder.Child = new PhillyPoacherCustom();
+                var item = new PhillyPoacherCustom();
+                item.DataContext = new PhillyPoacher();
+                containerBorder.Child = item;
             }
             if (button.Name == "SmokehouseSkeleton")
             {
-                containerBorder.Child = new SmokehouseSkeletonCustom();
+                var item = new SmokehouseSkeletonCustom();
+                item.DataContext = new SmokehouseSkeleton();
+                containerBorder.Child = item;
             }
             if (button.Name == "AretinoAppleJuice")
             {
-                containerBorder.Child = new AretinoAppleJuiceCustom();
+                var item = new AretinoAppleJuiceCustom();
+                item.DataContext = new AretinoAppleJuice();
+                containerBorder.Child = item;
             }
             if (button.Name == "CandlehearthCoffee")
             {
-                containerBorder.Child = new CandlehearthCoffeeCustom();
+                var item = new CandlehearthCoffeeCustom();
+                item.DataContext = new CandlehearthCoffee();
+                containerBorder.Child = item;
             }
             if (button.Name == "MarkarthMilk")
             {
-                containerBorder.Child = new AretinoAppleJuiceCustom();
+                var item = new MarkarthMilkCustom();
+                item.DataContext = new MarkarthMilkCustom();
+                containerBorder.Child = item;
             }
             if (button.Name == "SailorSoda")
             {
-                containerBorder.Child = new SailorSodaCustom();
+                var item = new BriarheartBurgerCustom();
+                item.DataContext = new BriarheartBurger();
+                containerBorder.Child = item;
             }
             if (button.Name == "WarriorWater")
             {
-                containerBorder.Child = new WarriorWaterCustom();
+                var item = new SailorSodaCustom();
+                item.DataContext = new SailorSoda();
+                containerBorder.Child = item;
             }
             if (button.Name == "DragonbornWafflefries")
             {
-                containerBorder.Child = new SideCustom();
+                var item = new SideCustom();
+                item.DataContext = new DragonbornWafflefries();
+                containerBorder.Child = item;
             }
             if (button.Name == "FriedMiraak")
             {
-                containerBorder.Child = new SideCustom();
+                var item = new SideCustom();
+                item.DataContext = new FriedMiraak();
+                containerBorder.Child = item;
             }
             if (button.Name == "MadOtarGrits")
             {
-                containerBorder.Child = new SideCustom();
+                var item = new SideCustom();
+                item.DataContext = new MadOtarGrits();
+                containerBorder.Child = item;
             }
             if (button.Name == "VokunSalad")
             {
-                containerBorder.Child = new SideCustom();
+                var item = new SideCustom();
+                item.DataContext = new VokunSalad();
+                containerBorder.Child = item;
             }            
         }
         public void Done_Click(object sender, RoutedEventArgs e)

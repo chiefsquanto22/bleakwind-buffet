@@ -43,11 +43,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             ab.Size = Size.Medium;
             VokunSalad ac = new VokunSalad();
             ac.Size = Size.Large;
-            DragonbornWaffleFries ba = new DragonbornWaffleFries();
+            DragonbornWafflefries ba = new DragonbornWafflefries();
             ba.Size = Size.Small;
-            DragonbornWaffleFries bb = new DragonbornWaffleFries();
+            DragonbornWafflefries bb = new DragonbornWafflefries();
             bb.Size = Size.Medium;
-            DragonbornWaffleFries bc = new DragonbornWaffleFries();
+            DragonbornWafflefries bc = new DragonbornWafflefries();
             bc.Size = Size.Large;
             MadOtarGrits ca = new MadOtarGrits();
             ca.Size = Size.Small;
@@ -232,11 +232,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             VokunSalad acs = new VokunSalad();
             acs.Size = Size.Large;
 
-            DragonbornWaffleFries bas = new DragonbornWaffleFries();
+            DragonbornWafflefries bas = new DragonbornWafflefries();
             bas.Size = Size.Small;
-            DragonbornWaffleFries bbs = new DragonbornWaffleFries();
+            DragonbornWafflefries bbs = new DragonbornWafflefries();
             bbs.Size = Size.Medium;
-            DragonbornWaffleFries bcs = new DragonbornWaffleFries();
+            DragonbornWafflefries bcs = new DragonbornWafflefries();
             bcs.Size = Size.Large;
 
             MadOtarGrits cas = new MadOtarGrits();

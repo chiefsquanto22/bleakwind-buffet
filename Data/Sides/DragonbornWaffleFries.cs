@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Creates an object to represent Dragonborn Waffle Fries
     /// </summary>
-    public class DragonbornWaffleFries : Side, INotifyPropertyChanged
+    public class DragonbornWafflefries : Side, INotifyPropertyChanged
     {
         /// <value>
         /// private backing variable for Price
