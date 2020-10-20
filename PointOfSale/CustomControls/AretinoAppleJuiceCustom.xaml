@@ -9,6 +9,9 @@
     <Grid Background="White">
         <StackPanel>
             <CheckBox Content="Ice" IsChecked="{Binding Path=Ice}"/>
+            <RadioButton Content="Small" IsChecked="{Binding Path=Size}"/>
+            <RadioButton Content="Medium" IsChecked="{Binding Path=Size}"/>
+            <RadioButton Content="Large" IsChecked="{Binding Path=Size}"/>
         </StackPanel>
     </Grid>
 </UserControl>

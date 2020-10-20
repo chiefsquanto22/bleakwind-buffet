@@ -8,20 +8,18 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
         <StackPanel>
-            <ComboBox  Width="100" HorizontalAlignment="Left" SelectedItem="{Binding Path=Size}">
-                <ComboBoxItem Content="Small"/>
-                <ComboBoxItem Content="Medium"/>
-                <ComboBoxItem Content="Large"/>
-            </ComboBox>
-            <ComboBox  Width="100" HorizontalAlignment="Left" SelectedItem="{Binding Path=Flavor}">
-                <ComboBoxItem Content="Blackberry"/>
-                <ComboBoxItem Content="Cherry"/>
-                <ComboBoxItem Content="Grapefruit"/>
-                <ComboBoxItem Content="Lemon"/>
-                <ComboBoxItem Content="Peach"/>
-                <ComboBoxItem Content="Watermelon"/>
-            </ComboBox>
+            <RadioButton Content="Small" IsChecked="{Binding Path=Size}"/>
+            <RadioButton Content="Medium" IsChecked="{Binding Path=Size}"/>
+            <RadioButton Content="Large" IsChecked="{Binding Path=Size}"/>
+        </StackPanel>
+        <StackPanel Margin="0,55,0,0">
+            <RadioButton Content="Blackberry"   IsChecked="{Binding Path=Flavor}"/>
+            <RadioButton Content="Cherry"       IsChecked="{Binding Path=Flavor}"/>
+            <RadioButton Content="Grapefruit"   IsChecked="{Binding Path=Flavor}"/>
+            <RadioButton Content="Lemon"        IsChecked="{Binding Path=Flavor}"/>
+            <RadioButton Content="Peach"        IsChecked="{Binding Path=Flavor}"/>
+            <RadioButton Content="Watermelon"   IsChecked="{Binding Path=Flavor}"/>
         </StackPanel>
     </Grid>
-    
+
 </UserControl>

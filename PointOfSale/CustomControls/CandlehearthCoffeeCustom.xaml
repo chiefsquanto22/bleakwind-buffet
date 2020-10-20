@@ -11,11 +11,9 @@
             <CheckBox Content="Ice"             IsChecked="{Binding Path=Ice}"/>
             <CheckBox Content="Room for Cream"  IsChecked="{Binding Path=RoomForCream}"/>
             <CheckBox Content="Decaf"           IsChecked="{Binding Path=Decaf}"/>
-            <ComboBox Width="100" HorizontalAlignment="Left">
-                <ComboBoxItem Content="Small"/>
-                <ComboBoxItem Content="Medium"/>
-                <ComboBoxItem Content="Large"/>
-            </ComboBox>
+            <RadioButton Content="Small"        IsChecked="{Binding Path=Size}"/>
+            <RadioButton Content="Medium"       IsChecked="{Binding Path=Size}"/>
+            <RadioButton Content="Large"        IsChecked="{Binding Path=Size}"/>
         </StackPanel>
     </Grid>
 </UserControl>
