@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Text;
@@ -10,6 +11,8 @@ namespace BleakwindBuffet.Data
     public class Order : INotifyPropertyChanged, INotifyCollectionChanged, ICollection<IOrderItem>
     {
         public ICollection<IOrderItem> Items;
+
+        public Collection<IOrderItem> Items;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -21,13 +24,24 @@ namespace BleakwindBuffet.Data
 
         public double SalesTaxRate { get; set; } = .12;
 
-        public double Subtotal;
+        public double Subtotal { get; }
 
         public double Tax { get => Subtotal * SalesTaxRate; }
 
         public double Total { get => Subtotal + Tax; }
 
-        public uint Calories;
+        private uint calories = 0;
+        public uint Calories
+        {
+            get
+            {
+                foreach(IOrderItem item in Items)
+                {
+                    calories += item.Calories;
+                }
+                return calories;
+            }
+        }
 
         public Order()
         {
@@ -37,49 +51,10 @@ namespace BleakwindBuffet.Data
 
         public void Add(IOrderItem item)
         {
-            Items.Add(item);
-            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+
         }
 
-        public bool Remove(IOrderItem item)
-        {
-            bool success = false;
-            foreach(IOrderItem thing in Items)
-            {
-                if (thing.Equals(item))
-                {
-                    Items.Remove(item);
-                    success = true;
-                    CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove));
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
-                }
-            }
-            return success;
-        }
-
-        public void Clear()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Contains(IOrderItem item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void CopyTo(IOrderItem[] array, int arrayIndex)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerator<IOrderItem> GetEnumerator()
+        public void Remove(IOrderItem item)
         {
             throw new NotImplementedException();
         }
