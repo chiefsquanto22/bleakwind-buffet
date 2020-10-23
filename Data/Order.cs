@@ -12,8 +12,6 @@ namespace BleakwindBuffet.Data
     {
         public ICollection<IOrderItem> Items;
 
-        public Collection<IOrderItem> Items;
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         public event NotifyCollectionChangedEventHandler CollectionChanged;
@@ -60,6 +58,31 @@ namespace BleakwindBuffet.Data
         }
 
         IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Contains(IOrderItem item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CopyTo(IOrderItem[] array, int arrayIndex)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool ICollection<IOrderItem>.Remove(IOrderItem item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerator<IOrderItem> GetEnumerator()
         {
             throw new NotImplementedException();
         }
