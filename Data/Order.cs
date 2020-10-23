@@ -49,12 +49,25 @@ namespace BleakwindBuffet.Data
 
         public void Add(IOrderItem item)
         {
-
+            Items.Add(item);
+            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
         }
 
         public void Remove(IOrderItem item)
         {
-            throw new NotImplementedException();
+            if (Items.Contains(item))
+            {
+                Items.Remove(item);
+            }
+            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
         }
 
         IEnumerator IEnumerable.GetEnumerator()
