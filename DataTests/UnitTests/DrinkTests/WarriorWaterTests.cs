@@ -14,7 +14,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     public class WarriorWaterTests
     {
         [Theory]
-        [InlineData(Size.Small)]
+        
         [InlineData(Size.Medium)]
         [InlineData(Size.Large)]
         public void ChangingSizeNotifiesSizeProperty(Size size)
@@ -24,6 +24,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             {
                 var.Size = size;
             });
+            Assert.PropertyChanged(var, "Size", () =>
+            {
+                var.Size = Size.Small;
+            });
         }
         [Fact]
         public void ChangingLemonNotifiesLemonProperty()
@@ -32,12 +36,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
             Assert.PropertyChanged(AJ, "Lemon", () =>
             {
-                AJ.Lemon = false;
+                AJ.Lemon = true;
             });
 
             Assert.PropertyChanged(AJ, "Lemon", () =>
             {
-                AJ.Lemon = true;
+                AJ.Lemon = false;
             });
         }
         [Fact]
@@ -47,12 +51,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
             Assert.PropertyChanged(AJ, "Ice", () =>
             {
-                AJ.Ice = true;
+                AJ.Ice = false;
             });
 
             Assert.PropertyChanged(AJ, "Ice", () =>
             {
-                AJ.Ice = false;
+                AJ.Ice = true;
             });
         }
         [Fact]

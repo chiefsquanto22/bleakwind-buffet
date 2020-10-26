@@ -17,7 +17,7 @@ namespace BleakwindBuffet.Data.Drinks
     public class MarkarthMilk : Drink, INotifyPropertyChanged
     {
 
-        public override event PropertyChangedEventHandler PropertyChanged;
+        
         /// <value>
         /// Private backing variable for Price
         /// </value>
@@ -86,7 +86,7 @@ namespace BleakwindBuffet.Data.Drinks
                 if (ice != value)
                 {
                     ice = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                    InvokePropertyChanged("Ice");
                 }
             }
         }

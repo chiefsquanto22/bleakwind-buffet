@@ -10,7 +10,7 @@ namespace BleakwindBuffet.Data
 {
     public class Order : INotifyPropertyChanged, INotifyCollectionChanged, ICollection<IOrderItem>
     {
-        public ICollection<IOrderItem> Items;
+        public ICollection<IOrderItem> Items { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -18,11 +18,22 @@ namespace BleakwindBuffet.Data
 
         private static int nextOrderNumber = 1;
 
-        public int Number { get; }
+        public int OrderNumber { get; }
 
         public double SalesTaxRate { get; set; } = .12;
 
-        public double Subtotal { get; }
+        public double Subtotal
+        {
+            get
+            {
+                double subtotal = 0;
+                foreach (IOrderItem item in Items)
+                {
+                    subtotal += item.Price;
+                }
+                return subtotal;
+            }
+        }
 
         public double Tax { get => Subtotal * SalesTaxRate; }
 
@@ -33,7 +44,7 @@ namespace BleakwindBuffet.Data
         {
             get
             {
-                foreach(IOrderItem item in Items)
+                foreach (IOrderItem item in Items)
                 {
                     calories += item.Calories;
                 }
@@ -43,14 +54,16 @@ namespace BleakwindBuffet.Data
 
         public Order()
         {
-            Number = nextOrderNumber;
+            Items = new ObservableCollection<IOrderItem>();
+            OrderNumber = nextOrderNumber;
             nextOrderNumber++;
         }
 
         public void Add(IOrderItem item)
         {
             Items.Add(item);
-            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add));
+            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, item));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
@@ -64,6 +77,7 @@ namespace BleakwindBuffet.Data
                 Items.Remove(item);
             }
             CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
@@ -72,7 +86,7 @@ namespace BleakwindBuffet.Data
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return (IEnumerator)GetEnumerator();
         }
 
         public void Clear()
@@ -97,7 +111,7 @@ namespace BleakwindBuffet.Data
 
         public IEnumerator<IOrderItem> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return Items.GetEnumerator();
         }
 
         public int Count => throw new NotImplementedException();

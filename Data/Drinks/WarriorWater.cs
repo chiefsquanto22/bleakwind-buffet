@@ -39,7 +39,7 @@ namespace BleakwindBuffet.Data.Drinks
                 if (ice != value)
                 {
                     ice = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                    InvokePropertyChanged("Ice");
                 }
             }
         }
@@ -56,11 +56,11 @@ namespace BleakwindBuffet.Data.Drinks
                 if (lemon != value)
                 {
                     lemon = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
+                    InvokePropertyChanged("Lemon");
                 }
             }
         }
-        public override event PropertyChangedEventHandler PropertyChanged;
+        
 
         /// <value>
         /// Creates a list of special instructions for the order

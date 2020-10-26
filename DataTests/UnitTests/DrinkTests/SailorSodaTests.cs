@@ -16,7 +16,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     public class SailorSodaTests
     {
         [Theory]
-        [InlineData(Size.Small)]
+        
         [InlineData(Size.Medium)]
         [InlineData(Size.Large)]
         public void ChangingSizeNotifiesSizeProperty(Size size)
@@ -26,9 +26,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             {
                 var.Size = size;
             });
+            Assert.PropertyChanged(var, "Size", () =>
+            {
+                var.Size = Size.Small;
+            });
         }
         [Theory]
-        [InlineData(SodaFlavor.Cherry)]
+        
         [InlineData(SodaFlavor.Blackberry)]
         [InlineData(SodaFlavor.Grapefruit)]
         [InlineData(SodaFlavor.Lemon)]
@@ -42,6 +46,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             {
                 AJ.Flavor = flavor;
             });
+            Assert.PropertyChanged(AJ, "Flavor", () =>
+            {
+                AJ.Flavor = SodaFlavor.Cherry;
+            });
         }
         [Fact]
         public void ChangingIceNotifiesIceProperty()
@@ -50,12 +58,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
             Assert.PropertyChanged(AJ, "Ice", () =>
             {
-                AJ.Ice = true;
+                AJ.Ice = false;
             });
 
             Assert.PropertyChanged(AJ, "Ice", () =>
             {
-                AJ.Ice = false;
+                AJ.Ice = true;
             });
         }
         [Fact]

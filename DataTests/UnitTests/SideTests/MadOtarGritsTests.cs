@@ -14,7 +14,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class MadOtarGritsTests
     {
         [Theory]
-        [InlineData(Size.Small)]
+        
         [InlineData(Size.Medium)]
         [InlineData(Size.Large)]
         public void ChangingSizeNotifiesSizeProperty(Size size)
@@ -23,6 +23,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.PropertyChanged(var, "Size", () =>
             {
                 var.Size = size;
+            });
+            Assert.PropertyChanged(var, "Size", () =>
+            {
+                var.Size = Size.Small;
             });
         }
         [Fact]

@@ -18,7 +18,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// </remarks>
     public abstract class Drink : IOrderItem
     {
-        public virtual event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
         private Size size = Size.Small;
         /// <summary>
         /// The size of the drink
@@ -31,7 +31,7 @@ namespace BleakwindBuffet.Data.Drinks
                 if (size != value)
                 {
                     size = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                    InvokePropertyChanged("Size");
                 }
             }
         }
@@ -49,5 +49,10 @@ namespace BleakwindBuffet.Data.Drinks
         /// A list of special instructions about the order
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+        protected void InvokePropertyChanged(string property)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        }
     }
 }

@@ -81,7 +81,7 @@ namespace BleakwindBuffet.Data.Drinks
                 if (ice != value)
                 {
                     ice = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                    InvokePropertyChanged("Ice");
                 }
             }
         }
@@ -98,7 +98,7 @@ namespace BleakwindBuffet.Data.Drinks
                 if(flavor!= value)
                 {
                     flavor = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Flavor"));
+                    InvokePropertyChanged("Flavor");
                 }
             }
         }
@@ -125,6 +125,6 @@ namespace BleakwindBuffet.Data.Drinks
             return Size.ToString() + " " + Flavor.ToString() + " Sailor Soda";
         }
 
-        public override event PropertyChangedEventHandler PropertyChanged;
+        
     }
 }

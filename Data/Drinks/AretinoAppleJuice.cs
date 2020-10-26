@@ -17,8 +17,6 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class AretinoAppleJuice : Drink, INotifyPropertyChanged
     {
-        public override event PropertyChangedEventHandler PropertyChanged;
-
         /// <value>
         /// Property to hold the Price of the beverage based on size
         /// </value>
@@ -74,7 +72,7 @@ namespace BleakwindBuffet.Data.Drinks
                 if (ice != value)
                 {
                     ice = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                    InvokePropertyChanged("Ice");
                 }
             }
         }

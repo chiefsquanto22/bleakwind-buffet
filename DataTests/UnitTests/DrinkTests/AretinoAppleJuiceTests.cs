@@ -15,7 +15,6 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     public class AretinoAppleJuiceTests
     {
         [Theory]
-        [InlineData(Size.Small)]
         [InlineData(Size.Medium)]
         [InlineData(Size.Large)]
         public void ChangingSizeNotifiesSizeProperty(Size size)
@@ -25,6 +24,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             {
                 var.Size = size;
             });
+            Assert.PropertyChanged(var, "Size", () =>
+            {
+                var.Size = Size.Small;
+            });
+
         }
         [Fact]
         public void ChangingIceNotifiesIceProperty()
