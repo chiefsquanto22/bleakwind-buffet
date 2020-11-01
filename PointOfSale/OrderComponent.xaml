@@ -25,25 +25,25 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        <local:MenuButton x:Name="BriarheartBurger"     DataContext="{Binding Path=BriarheartBurger}"     Click="MenuButton_Click" Content="Briarheart Burger" Grid.Column="0" Grid.Row="0" Background="OrangeRed"/>
-        <local:MenuButton x:Name="DoubleDragr"          Click="MenuButton_Click" Content="Double Dragr" Grid.Column="0" Grid.Row="1" Background="OrangeRed"/>
-        <local:MenuButton x:Name="ThalmorTriple"        Click="MenuButton_Click" Content="Thalmor Triple" Grid.Column="0" Grid.Row="2" Background="OrangeRed"/>
-        <local:MenuButton x:Name="GardenOrcOmelette"    Click="MenuButton_Click" Content="Garden Orc Omelette" Grid.Column="0" Grid.Row="3" Background="OrangeRed"/>
-        <local:MenuButton x:Name="PhillyPoacher"        Click="MenuButton_Click" Content="Philly Poacher" Grid.Column="0" Grid.Row="4" Background="OrangeRed"/>
-        <local:MenuButton x:Name="SmokehouseSkeleton"   Click="MenuButton_Click" Content="Smokehouse Skeleton" Grid.Column="0" Grid.Row="5" Background="OrangeRed"/>
-        <local:MenuButton x:Name="ThugsTBone"           Click="MenuButton_Click" Content="Thugs T-Bone" Grid.Column="0" Grid.Row="6" Background="OrangeRed"/>
-        <local:MenuButton x:Name="AretinoAppleJuice"    Click="MenuButton_Click" Content="Aretino Applejuice" Grid.Column="1" Grid.Row="0" Background="Aqua"/>
-        <local:MenuButton x:Name="CandlehearthCoffee"   Click="MenuButton_Click" Content="Candlehearth Coffee" Grid.Column="1" Grid.Row="1" Background="Aqua"/>
-        <local:MenuButton x:Name="MarkarthMilk"         Click="MenuButton_Click" Content="Markarth Milk" Grid.Column="1" Grid.Row="2" Background="Aqua"/>
-        <local:MenuButton x:Name="SailorSoda"           Click="MenuButton_Click" Content="Sailor Soda" Grid.Column="1" Grid.Row="3" Background="Aqua"/>
-        <local:MenuButton x:Name="WarriorWater"         Click="MenuButton_Click" Content="Warrior Water" Grid.Column="1" Grid.Row="4" Background="Aqua"/>
-        <local:MenuButton x:Name="DragonbornWafflefries" Click="MenuButton_Click" Content="Dragonborn Wafflefries" Grid.Column="2" Grid.Row="0" Background="Yellow"/>
-        <local:MenuButton x:Name="FriedMiraak"          Click="MenuButton_Click" Content="Fried Miraak" Grid.Column="2" Grid.Row="1" Background="Yellow"/>
-        <local:MenuButton x:Name="MadOtarGrits"         Click="MenuButton_Click" Content="Mad Otar Grits" Grid.Column="2" Grid.Row="2" Background="Yellow"/>
-        <local:MenuButton x:Name="VokunSalad"           Click="MenuButton_Click" Content="Vokun Salad" Grid.Column="2" Grid.Row="3" Background="Yellow"/>
+        <local:MenuButton x:Name="BriarheartBurger"     DataContext="{Binding Path=BriarheartBurger}"   Click="MenuButton_Click" Content="Briarheart Burger" Grid.Column="0" Grid.Row="0" Background="OrangeRed"/>
+        <local:MenuButton x:Name="DoubleDragr"          DataContext="{Binding Path=DoubleDragr}"   Click="MenuButton_Click" Content="Double Dragr" Grid.Column="0" Grid.Row="1" Background="OrangeRed"/>
+        <local:MenuButton x:Name="ThalmorTriple"        DataContext="{Binding Path=ThalmorTriple}"   Click="MenuButton_Click" Content="Thalmor Triple" Grid.Column="0" Grid.Row="2" Background="OrangeRed"/>
+        <local:MenuButton x:Name="GardenOrcOmelette"    DataContext="{Binding Path=GardenOrcOmelette}" Click="MenuButton_Click" Content="Garden Orc Omelette" Grid.Column="0" Grid.Row="3" Background="OrangeRed"/>
+        <local:MenuButton x:Name="PhillyPoacher"        DataContext="{Binding Path=PhillyPoacher}" Click="MenuButton_Click" Content="Philly Poacher" Grid.Column="0" Grid.Row="4" Background="OrangeRed"/>
+        <local:MenuButton x:Name="SmokehouseSkeleton"   DataContext="{Binding Path=SmokehouseSkeleton}" Click="MenuButton_Click" Content="Smokehouse Skeleton" Grid.Column="0" Grid.Row="5" Background="OrangeRed"/>
+        <local:MenuButton x:Name="ThugsTBone"           DataContext="{Binding Path=ThugsTBone}" Click="MenuButton_Click" Content="Thugs T-Bone" Grid.Column="0" Grid.Row="6" Background="OrangeRed"/>
+        <local:MenuButton x:Name="AretinoAppleJuice"    DataContext="{Binding Path=AretinoApplejuice}" Click="MenuButton_Click" Content="Aretino Applejuice" Grid.Column="1" Grid.Row="0" Background="Aqua"/>
+        <local:MenuButton x:Name="CandlehearthCoffee"   DataContext="{Binding Path=CandlehearthCoffee}" Click="MenuButton_Click" Content="Candlehearth Coffee" Grid.Column="1" Grid.Row="1" Background="Aqua"/>
+        <local:MenuButton x:Name="MarkarthMilk"         DataContext="{Binding Path=MarkarthMilk}" Click="MenuButton_Click" Content="Markarth Milk" Grid.Column="1" Grid.Row="2" Background="Aqua"/>
+        <local:MenuButton x:Name="SailorSoda"           DataContext="{Binding Path=SailorSoda}" Click="MenuButton_Click" Content="Sailor Soda" Grid.Column="1" Grid.Row="3" Background="Aqua"/>
+        <local:MenuButton x:Name="WarriorWater"         DataContext="{Binding Path=WarriorWater}" Click="MenuButton_Click" Content="Warrior Water" Grid.Column="1" Grid.Row="4" Background="Aqua"/>
+        <local:MenuButton x:Name="DragonbornWafflefries" DataContext="{Binding Path=DragonbornWafflefries}" Click="MenuButton_Click" Content="Dragonborn Wafflefries" Grid.Column="2" Grid.Row="0" Background="Yellow"/>
+        <local:MenuButton x:Name="FriedMiraak"          DataContext="{Binding Path=FriedMiraak}" Click="MenuButton_Click" Content="Fried Miraak" Grid.Column="2" Grid.Row="1" Background="Yellow"/>
+        <local:MenuButton x:Name="MadOtarGrits"         DataContext="{Binding Path=MadOtarGrits}" Click="MenuButton_Click" Content="Mad Otar Grits" Grid.Column="2" Grid.Row="2" Background="Yellow"/>
+        <local:MenuButton x:Name="VokunSalad"           DataContext="{Binding Path=VokunSalad}" Click="MenuButton_Click" Content="Vokun Salad" Grid.Column="2" Grid.Row="3" Background="Yellow"/>
         <Button Name="modifyItem"                       Click="ModifyItem" Content="Modify Item" Grid.Row="7"/>
         <Button Name="removeItem"                       Click="RemoveItem" Content="Remove Item" Grid.Row="7" Grid.Column="1" />
-        <Button Name="doneButton"                             Click="Done_Click" Content="Done" Grid.Row="7" Grid.Column="2"/>
+        <Button Name="doneButton"                       Click="Done_Click" Content="Done" Grid.Row="7" Grid.Column="2"/>
         <local:OrderSummary Grid.Column="3" Grid.RowSpan="8"/>
         
         <Border Name="containerBorder" Grid.ColumnSpan="3" Grid.RowSpan="7"/>

@@ -88,86 +88,120 @@ namespace PointOfSale
                 if (button.Name == "DoubleDragr")
                 {
                     var item = new DoubleDragrCustom();
-                    item.DataContext = new DoubleDragr();
+                    var menuItem = new DoubleDragr();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "ThalmorTriple")
                 {
                     var item = new ThalmorTripleCustom();
-                    item.DataContext = new ThalmorTriple();
+                    var menuItem= new ThalmorTriple();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "GardenOrcOmelette")
                 {
                     var item = new GardenOrcOmeletteCustom();
-                    item.DataContext = new GardenOrcOmelette();
+                    var menuItem = new GardenOrcOmelette();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "PhillyPoacher")
                 {
                     var item = new PhillyPoacherCustom();
-                    item.DataContext = new PhillyPoacher();
+                    var menuItem = new PhillyPoacher();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "SmokehouseSkeleton")
                 {
                     var item = new SmokehouseSkeletonCustom();
-                    item.DataContext = new SmokehouseSkeleton();
+                    var menuItem = new SmokehouseSkeleton();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
+                }
+                if(button.Name == "ThugsTBone")
+                {
+                    var menuItem = new ThugsTBone();
+                    var.Add(menuItem);
+
                 }
                 if (button.Name == "AretinoAppleJuice")
                 {
                     var item = new AretinoAppleJuiceCustom();
-                    item.DataContext = new AretinoAppleJuice();
+                    var menuItem = new AretinoAppleJuice();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "CandlehearthCoffee")
                 {
                     var item = new CandlehearthCoffeeCustom();
-                    item.DataContext = new CandlehearthCoffee();
+                    var menuItem = new CandlehearthCoffee();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "MarkarthMilk")
                 {
                     var item = new MarkarthMilkCustom();
-                    item.DataContext = new MarkarthMilk();
+                    var menuItem = new MarkarthMilk();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "SailorSoda")
                 {
                     var item = new SailorSodaCustom();
-                    item.DataContext = new SailorSoda();
+                    var menuItem = new SailorSoda();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "WarriorWater")
                 {
                     var item = new WarriorWaterCustom();
-                    item.DataContext = new WarriorWater();
+                    var menuItem = new WarriorWater();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "DragonbornWafflefries")
                 {
                     var item = new SideCustom();
-                    item.DataContext = new DragonbornWafflefries();
+                    var menuItem = new DragonbornWafflefries();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "FriedMiraak")
                 {
                     var item = new SideCustom();
-                    item.DataContext = new FriedMiraak();
+                    var menuItem = new FriedMiraak();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "MadOtarGrits")
                 {
                     var item = new SideCustom();
-                    item.DataContext = new MadOtarGrits();
+                    var menuItem = new MadOtarGrits();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
                 if (button.Name == "VokunSalad")
                 {
                     var item = new SideCustom();
-                    item.DataContext = new VokunSalad();
+                    var menuItem = new VokunSalad();
+                    item.DataContext = menuItem;
                     containerBorder.Child = item;
+                    var.Add(menuItem);
                 }
             }
         }
