@@ -4,23 +4,47 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
+<div class="text-left">
     <h1 class="display-4">Bleakwind Buffet</h1>
     <p>We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim. Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure and earned your loot, so spend it with us!.</p>
-    <ul class="menu-entrees">
-        <h2>Entrees</h2>
-        @foreach (IOrderItem item in Menu.Entrees)
+    <h2>Entrees</h2>
+    <ul class="menu">
+
+        @foreach (BleakwindBuffet.Data.Entrees.Entree item in BleakwindBuffet.Data.Menu.Entrees())
         {
             <li>
                 <div class="menu-item">
-                    <div class="item-name"></div>
-                    <div class="item-price"></div>
-                    <div class="item-calories"></div>
+                    <div class="item-name">@item.ToString()</div>
+                    <div class="item-price">$@item.Price</div>
+                    <div class="item-calories">@item.Calories Cal.</div>
                 </div>
             </li>
         }
     </ul>
     <h2>Sides</h2>
+    <ul class="menu">
+        @foreach (BleakwindBuffet.Data.Sides.Side item in BleakwindBuffet.Data.Menu.Sides())
+        {
+            <li>
+                <div class="menu-item">
+                    <div class="item-name">@item.ToString()</div>
+                    <div class="item-price">$@item.Price</div>
+                    <div class="item-calories">@item.Calories Cal.</div>
+                </div>
+            </li>
+        }
+    </ul>
     <h2>Drinks</h2>
-
+    <ul class="menu">
+        @foreach (BleakwindBuffet.Data.Drinks.Drink item in BleakwindBuffet.Data.Menu.Drinks())
+        {
+            <li>
+                <div class="menu-item">
+                    <div class="item-name">@item.ToString()</div>
+                    <div class="item-price">$@item.Price</div>
+                    <div class="item-calories">@item.Calories Cal.</div>
+                </div>
+            </li>
+        }
+    </ul>
 </div>
