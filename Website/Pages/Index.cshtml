@@ -4,41 +4,42 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-left">
-    <h1 class="display-4">Bleakwind Buffet</h1>
-    <p>We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim. Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure and earned your loot, so spend it with us!.</p>
-    <form>
-        <div id="search">
-            <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
-            <input type="submit" value="Search">
+
+<h1 class="display-4">Bleakwind Buffet</h1>
+<p>We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim. Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure and earned your loot, so spend it with us!.</p>
+<form id="menu-database">
+    <div id="search">
+        <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
+        <input type="submit" value="Search">
+    </div>
+    <div id="filters">
+        <h4>Category</h4>
+        @foreach (String category in BleakwindBuffet.Data.Menu.Categories)
+        {
+            <label>
+                <input type="checkbox" name="Category" value="@category" checked="@Model.Categories.Contains(category)" />
+                @category
+            </label>
+        }
+        <h4>Price</h4>
+        <div>
+            Between
+            <input name="minPrice" type="number" min="0" max="1000" step="1" placeholder="min" />
+            and
+            <input name="maxPrice" type="number" min="0" max="1000" step="1" placeholder="max" />
         </div>
-        <div id="filters">
-            <h4>Category</h4>
-            @foreach (String category in BleakwindBuffet.Data.Menu.Categories)
-            {
-                <label>
-                    <input type="checkbox" name="Category" value="@category" checked="@Model.Categories.Contains(category)" />
-                    @category
-                </label>
-            }
-            <h4>Price</h4>
-            <div>
-                Between
-                <input name="minPrice" type="number" min="0" max="1000" step="1" placeholder="min" />
-                and
-                <input name="maxPrice" type="number" min="0" max="1000" step="1" placeholder="max" />
-            </div>
-            <h4>Calories</h4>
-            <div>
-                Between
-                <input name="minCal" type="number" min="0" max="1000" step="1" placeholder="min" />
-                and
-                <input name="maxCal" type="number" min="0" max="1000" step="1" placeholder="max" />
-            </div>
+        <h4>Calories</h4>
+        <div>
+            Between
+            <input name="minCal" type="number" min="0" max="1000" step="1" placeholder="min" />
+            and
+            <input name="maxCal" type="number" min="0" max="1000" step="1" placeholder="max" />
         </div>
+    </div>
+    <div id="results">
         <h2>Entrees</h2>
         <ul class="menu">
-            @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Entrees)
+            @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Items)
             {
                 <li>
                     <div class="menu-item">
@@ -51,7 +52,7 @@
         </ul>
         <h2>Sides</h2>
         <ul class="menu">
-            @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Sides)
+            @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Items)
             {
                 <li>
                     <div class="menu-item">
@@ -60,11 +61,12 @@
                         <div class="item-calories">@item.Calories Cal.</div>
                     </div>
                 </li>
+
             }
         </ul>
         <h2>Drinks</h2>
         <ul class="menu">
-            @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Drinks)
+            @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Items)
             {
                 <li>
                     <div class="menu-item">
@@ -75,7 +77,7 @@
                 </li>
             }
         </ul>
-    </form>
-</div>
+    </div>
+</form>
 
-    
+
