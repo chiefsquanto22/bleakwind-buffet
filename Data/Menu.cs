@@ -276,12 +276,18 @@ namespace BleakwindBuffet.Data
             return menu;
         }
 
+        /// <summary>
+        /// Filters the menu based on the search bar
+        /// </summary>
+        /// <param name="items"> the menu </param>
+        /// <param name="searchTerms"> the search terms entered in the search bar </param>
+        /// <returns></returns>
         public static IEnumerable<IOrderItem> Search(IEnumerable<IOrderItem> items, string searchTerms)
         {
             List<IOrderItem> results = new List<IOrderItem>();
 
             // null check
-            if (searchTerms == null) return FullMenu();
+            if (searchTerms == null) return items;
 
             foreach (IOrderItem item in items)
             {
@@ -295,9 +301,15 @@ namespace BleakwindBuffet.Data
             return results;
         }
 
+        /// <summary>
+        /// Filters the menu by category
+        /// </summary>
+        /// <param name="items"> the menu </param>
+        /// <param name="category"> the selected categories </param>
+        /// <returns></returns>
         public static IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> items, IEnumerable<string> category)
         {
-            if (category == null || category.Count() == 0) return FullMenu();
+            if (category == null || category.Count() == 0) return items;
             List<IOrderItem> results = new List<IOrderItem>();
             foreach(IOrderItem item in items)
             {
@@ -309,6 +321,13 @@ namespace BleakwindBuffet.Data
             return results;
         }
 
+        /// <summary>
+        /// Filters the menu based on Calories
+        /// </summary>
+        /// <param name="items"> the list of items on the menu </param>
+        /// <param name="min"> the minimum calories </param>
+        /// <param name="max"> the maximum calories </param>
+        /// <returns></returns>
         public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> items, uint? min, uint? max)
         {
             if (min == null && max == null) return items;
@@ -339,6 +358,13 @@ namespace BleakwindBuffet.Data
             return results;
         }
 
+        /// <summary>
+        /// Filters the menu based on Price
+        /// </summary>
+        /// <param name="items"> the menu </param>
+        /// <param name="min"> the minimum price </param>
+        /// <param name="max"> the maximum price </param>
+        /// <returns></returns>
         public static IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> items, double? min, double? max)
         {
             if (min == null && max == null) return items;

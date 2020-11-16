@@ -13,17 +13,28 @@ namespace Website.Pages
 {
     public class IndexModel : PageModel
     {
-        public IEnumerable<IOrderItem> Items { get; set; }
+        public IEnumerable<IOrderItem> Entrees { get; set; } = Menu.Entrees();
+        public IEnumerable<IOrderItem> Sides { get; set; } = Menu.Sides();
+        public IEnumerable<IOrderItem> Drinks { get; set; } = Menu.Drinks();
         public string SearchTerms { get; set; }
         public string[] Categories { get; set; }
 
         public void OnGet(double? minPrice, double? maxPrice, uint? minCal, uint? maxCal)
         {
-            Categories = Request.Query["Categories"];
-            Items = Menu.Search(Items, SearchTerms);
-            Items = Menu.FilterByCalories(Items, minCal, maxCal);
-            Items = Menu.FilterByPrice(Items, minPrice, maxPrice);
-            Items = Menu.FilterByCategory(Items, Categories);
+            SearchTerms = Request?.Query["SearchTerms"];
+            Categories = Request?.Query["Categories"];
+            Entrees = Menu.Search(Entrees, SearchTerms);
+            Entrees = Menu.FilterByCalories(Entrees, minCal, maxCal);
+            Entrees = Menu.FilterByPrice(Entrees, minPrice, maxPrice);
+            Entrees = Menu.FilterByCategory(Entrees, Categories);
+            Sides = Menu.Search(Sides, SearchTerms);
+            Sides = Menu.FilterByCalories(Sides, minCal, maxCal);
+            Sides = Menu.FilterByPrice(Sides, minPrice, maxPrice);
+            Sides = Menu.FilterByCategory(Sides, Categories);
+            Drinks = Menu.Search(Drinks, SearchTerms);
+            Drinks = Menu.FilterByCalories(Drinks, minCal, maxCal);
+            Drinks = Menu.FilterByPrice(Drinks, minPrice, maxPrice);
+            Drinks = Menu.FilterByCategory(Drinks, Categories);
         }
     }
 }
