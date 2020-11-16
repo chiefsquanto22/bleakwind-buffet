@@ -62,6 +62,7 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -102,4 +103,31 @@ form#menu-database {
     grid-column-start: 1;
     grid-column-end: 5;
     text-align: center;
+}
+
+.results {
+    display: flex;
+    flex-direction: row;
+}
+
+.float-columns > div {
+    float: left;
+    width: 33%;
+}
+
+.clearfix{
+    clear: both;
+}
+
+@media (max-width: 490px){
+    .float-columns > div {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media(max-width: 490px){
+    .results{
+        flex-direction: column;
+    }
 }

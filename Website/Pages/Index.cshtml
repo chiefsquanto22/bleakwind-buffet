@@ -37,50 +37,56 @@
         </div>
     </div>
     <div id="results">
-        <h2>Entrees</h2>
-        <ul class="menu">
-            @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Entrees)
-            {
-                <li>
-                    <div class="menu-item">
-                        <div class="item-name">@item.ToString()</div>
-                        <div class="item-description">@item.Description</div>
-                        <div class="item-price">$@item.Price</div>
-                        <div class="item-calories">@item.Calories Cal.</div>
+        <div>
+            <h2>Entrees</h2>
+            <ul class="menu">
+                @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Entrees)
+                {
+                    <li>
+                        <div class="menu-item">
+                            <div class="item-name">@item.ToString()</div>
+                            <div class="item-description">@item.Description</div>
+                            <div class="item-price">$@item.Price</div>
+                            <div class="item-calories">@item.Calories Cal.</div>
 
-                    </div>
-                </li>
-            }
-        </ul>
-        <h2>Sides</h2>
-        <ul class="menu">
-            @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Sides)
-            {
-                <li>
-                    <div class="menu-item">
-                        <div class="item-name">@item.ToString()</div>
-                        <div class="item-description">@item.Description</div>
-                        <div class="item-price">$@item.Price</div>
-                        <div class="item-calories">@item.Calories Cal.</div>
-                    </div>
-                </li>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div>
+            <h2>Sides</h2>
+            <ul class="menu">
+                @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Sides)
+                {
+                    <li>
+                        <div class="menu-item">
+                            <div class="item-name">@item.ToString()</div>
+                            <div class="item-description">@item.Description</div>
+                            <div class="item-price">$@item.Price</div>
+                            <div class="item-calories">@item.Calories Cal.</div>
+                        </div>
+                    </li>
 
-            }
-        </ul>
-        <h2>Drinks</h2>
-        <ul class="menu">
-            @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Drinks)
-            {
-                <li>
-                    <div class="menu-item">
-                        <div class="item-name">@item.ToString()</div>
-                        <div class="item-description">@item.Description</div>
-                        <div class="item-price">$@item.Price</div>
-                        <div class="item-calories">@item.Calories Cal.</div>
-                    </div>
-                </li>
-            }
-        </ul>
+                }
+            </ul>
+        </div>
+        <div>
+            <h2>Drinks</h2>
+            <ul class="menu">
+                @foreach (BleakwindBuffet.Data.IOrderItem item in Model.Drinks)
+                {
+                    <li>
+                        <div class="menu-item">
+                            <div class="item-name">@item.ToString()</div>
+                            <div class="item-description">@item.Description</div>
+                            <div class="item-price">$@item.Price</div>
+                            <div class="item-calories">@item.Calories Cal.</div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
     </div>
 </form>
 
