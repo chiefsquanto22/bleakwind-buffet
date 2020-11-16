@@ -8,7 +8,7 @@ using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Enums;
 using Xunit;
 
-namespace BleakwindBuffet.DataTests.UnitTests.SideTests
+namespace BleakwindBuffet.DataTests.UnitTests
 {
     public class MenuTests
     {
