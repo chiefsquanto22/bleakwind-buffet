@@ -10,7 +10,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
         [Fact]
         public void NullSearchTerms()
         {
-
+            
         }
 
 

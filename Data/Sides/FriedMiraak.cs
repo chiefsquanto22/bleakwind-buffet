@@ -16,6 +16,11 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public class FriedMiraak : Side, INotifyPropertyChanged
     {
+        /// <summary>
+        /// A description of the item
+        /// </summary>
+        public override string Description { get => "Perfectly prepared hash brown pancakes."; }
+
         /// <value>
         /// Private backing variable for Price
         /// </value>

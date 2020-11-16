@@ -16,7 +16,11 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class CandlehearthCoffee : Drink, INotifyPropertyChanged
     {
-        
+        /// <summary>
+        /// A description of the item
+        /// </summary>
+        public override string Description { get => "Fair trade, fresh ground dark roast coffee."; }
+
         /// <value>
         /// Property to hold the Price of the beverage based on Size
         /// </value>

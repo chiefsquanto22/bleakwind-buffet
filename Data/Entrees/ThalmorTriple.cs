@@ -26,6 +26,11 @@ namespace BleakwindBuffet.Data.Entrees
         /// </value>
         public override uint Calories { get => 943; }
 
+        /// <summary>
+        /// A description of the item
+        /// </summary>
+        public override string Description { get => "Think you are strong enough to take on the Thalmor? Includes two 1/4lb patties with a 1/2lb patty inbetween with ketchup, mustard, pickle, cheese, tomato, lettuce, mayo, bacon, and an egg."; }
+
         /// <value>
         /// Property to hold status of the tomato. Default true.
         /// </value>

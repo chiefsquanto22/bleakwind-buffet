@@ -17,6 +17,11 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class WarriorWater : Drink, INotifyPropertyChanged
     {
+        /// <summary>
+        /// A description of the item
+        /// </summary>
+        public override string Description { get => "It's water. Just water."; }
+
         /// <value>
         /// Property to hold price
         /// </value>

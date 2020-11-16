@@ -24,6 +24,8 @@ namespace BleakwindBuffet.Data.Entrees
         /// </value>
         public override uint Calories { get => 982; }
 
+        public override string Description { get => "Juicy T-Bone, not much else to say."; }
+
         /// <value>
         /// Creates an empty list. You don't change a T Bone.
         /// </value>

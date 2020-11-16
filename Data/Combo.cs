@@ -12,6 +12,11 @@ namespace BleakwindBuffet.Data
         public double Price => throw new NotImplementedException();
 
         public uint Calories { get; set; }
+        
+        /// <summary>
+        /// A description of the item
+        /// </summary>
+        public string Description { get => ""; }
 
         public List<string> SpecialInstructions => throw new NotImplementedException();
     }

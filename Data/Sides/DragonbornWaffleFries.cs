@@ -15,6 +15,11 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public class DragonbornWafflefries : Side, INotifyPropertyChanged
     {
+        /// <summary>
+        /// A description of the item
+        /// </summary>
+        public override string Description { get => "Crispy fried potato waffle fries."; }
+
         /// <value>
         /// private backing variable for Price
         /// </value>

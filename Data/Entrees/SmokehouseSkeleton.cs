@@ -26,6 +26,11 @@ namespace BleakwindBuffet.Data.Entrees
         /// </value>
         public override uint Calories { get => 602; }
 
+        /// <summary>
+        /// A description of the item
+        /// </summary>
+        public override string Description { get => "Put some meat on those bones with a small stack of pancakes. Includes sausage links, eggs, and hash browns on the side. Topped with the syrup of your choice."; }
+
         /// <value>
         /// Property to hold status of the sausage links. Default true.
         /// </value>

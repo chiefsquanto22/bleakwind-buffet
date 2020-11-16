@@ -16,6 +16,11 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public class MadOtarGrits : Side, INotifyPropertyChanged
     {
+        /// <summary>
+        /// A description of the item
+        /// </summary>
+        public override string Description { get => "Cheesey Grits."; }
+
         /// <value>
         /// Private backing variable for Price
         /// </value>

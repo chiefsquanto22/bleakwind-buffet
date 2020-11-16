@@ -17,6 +17,11 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class AretinoAppleJuice : Drink, INotifyPropertyChanged
     {
+        /// <summary>
+        /// A description of the item
+        /// </summary>
+        public override string Description { get => "Fresh squeezed apple juice."; }
+
         /// <value>
         /// Property to hold the Price of the beverage based on size
         /// </value>
