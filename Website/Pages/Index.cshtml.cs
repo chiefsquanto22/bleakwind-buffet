@@ -22,6 +22,10 @@ namespace Website.Pages
         public void OnGet(double? minPrice, double? maxPrice, uint? minCal, uint? maxCal)
         {
             SearchTerms = Request?.Query["SearchTerms"];
+            if(SearchTerms != null)
+            {
+                Entrees = from item in Entrees where item.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase) select item;
+            }
             Categories = Request?.Query["Categories"];
             Entrees = Menu.Search(Entrees, SearchTerms);
             Entrees = Menu.FilterByCalories(Entrees, minCal, maxCal);
