@@ -120,7 +120,7 @@ form#menu-database {
 }
 
 @media (max-width: 490px){
-    .float-columns > div {
+    .results > div {
         float: none;
         width: 100%;
     }
