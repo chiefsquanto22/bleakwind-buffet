@@ -35,8 +35,12 @@ namespace Website.Pages
 
             /*Entrees = Menu.Search(Entrees, SearchTerms);
             Entrees = Menu.FilterByCalories(Entrees, minCal, maxCal);
-            Entrees = Menu.FilterByPrice(Entrees, minPrice, maxPrice);
-            Entrees = Menu.FilterByCategory(Entrees, Categories);*/
+            Entrees = Menu.FilterByPrice(Entrees, minPrice, maxPrice);*/
+
+
+            Entrees = Menu.FilterByCategory(Entrees, Categories);
+            Sides = Menu.FilterByCategory(Sides, Categories);
+            Drinks = Menu.FilterByCategory(Drinks, Categories);
             if (minCal != null || maxCal != null)
             {
                 if(minCal!= null && maxCal == null)

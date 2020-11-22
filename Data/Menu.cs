@@ -313,7 +313,7 @@ namespace BleakwindBuffet.Data
             List<IOrderItem> results = new List<IOrderItem>();
             foreach(IOrderItem item in items)
             {
-                if (item.GetType().ToString().Equals(category))
+                if (item.GetType().ToString().Equals(category.ToString()))
                 {
                     results.Add(item);
                 }
